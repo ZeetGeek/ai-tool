@@ -36,14 +36,14 @@ export default function RootLayout({
 	return (
 		<>
 			<html lang="en">
-				<ThemeProvider>
-					<body className={`${poppins.variable} ${glancyr.variable} font-secondary bg-blue-950 dark:bg-purple-950`}>{children}</body>
-				</ThemeProvider>
+				<body className={`${poppins.variable} ${glancyr.variable} font-secondary `}>
+					<ThemeProvider>
+						<main className="bg-white text-neutral-800 dark:bg-neutral-950 dark:text-white">{children}</main>
+					</ThemeProvider>
+					<Analytics />
+					<SpeedInsights />
+				</body>
 			</html>
-			<Analytics />
-			<SpeedInsights />
 		</>
 	);
 }
-
-

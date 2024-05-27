@@ -28,7 +28,7 @@ const ThemeToggle = () => {
 
 	return (
 		<button
-			className="bg-blue-500 px-4 py-2 text-white dark:bg-purple-800 "
+			className="m-4 rounded-md bg-neutral-100 px-4 py-2  hover:bg-neutral-300 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-600"
 			onClick={toggleTheme}
 		>
 			Toggle Theme
