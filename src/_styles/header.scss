@@ -1,0 +1,11 @@
+.header_link {
+	@apply inline-flex  px-1 text-base font-medium text-neutral-400 transition-all duration-200  ease-in hover:text-neutral-800  dark:hover:text-white;
+
+	&.active {
+		@apply text-neutral-800 dark:text-white;
+
+		& + .header_dropdown_icon {
+			@apply text-neutral-800 dark:text-white;
+		}
+	}
+}

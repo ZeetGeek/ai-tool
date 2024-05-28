@@ -1,7 +1,11 @@
-import React from "react";
+import PageTransition from "@/components/page-transition/page-transition";
 
 const Home = () => {
-	return <div>Hello AI Tools</div>;
+	return (
+		<PageTransition>
+			<h1>Hello AI Tools</h1>
+		</PageTransition>
+	);
 };
 
 export default Home;
