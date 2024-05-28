@@ -21,6 +21,7 @@
 			"@/*": ["./src/*"],
 			"@/images/*": ["./src/_assets/images/*"],
 			"@/components/*": ["./src/components/*"],
+			"@/style/*": ["./src/_styles/*"],
 			"@/data/*": ["./src/data/*"]
 		}
 	},

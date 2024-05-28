@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import ThemeProvider from "@/components/theme-provider";
+import Layout from "@/components/layout";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Header from "@/components/header";
 import "./globals.scss";
 
 // poppins font
@@ -38,14 +37,7 @@ export default function RootLayout({
 		<>
 			<html lang="en">
 				<body className={`${poppins.variable} ${glancyr.variable} font-secondary `}>
-					<ThemeProvider>
-						<main className="bg-white text-neutral-800 dark:bg-neutral-950 dark:text-white">
-							<div className="pb-26 pt-8">
-								<Header />
-							</div>
-							{children}
-						</main>
-					</ThemeProvider>
+					<Layout>{children}</Layout>
 					<Analytics />
 					<SpeedInsights />
 				</body>

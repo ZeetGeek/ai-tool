@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import menuIcon from "@/images/icons/menu-icon.svg";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import "@/style/header.scss";
 
 const Header = () => {
 	const pathName = usePathname();
@@ -22,10 +23,7 @@ const Header = () => {
 							{/* menu icon */}
 							<Sheet>
 								<SheetTrigger>
-									<Button
-										variant="ghost"
-										className="p-1 "
-									>
+									<div className="rounded-md p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800">
 										<Image
 											src={menuIcon}
 											height={36}
@@ -33,7 +31,7 @@ const Header = () => {
 											alt="menu icon"
 											className="static_dark_icon"
 										/>
-									</Button>
+									</div>
 								</SheetTrigger>
 								<SheetContent side="left">
 									<SheetHeader>
@@ -87,9 +85,26 @@ const Header = () => {
 						</ul>
 
 						{/* auth buttons */}
-						<div className="flex items-center ">
-							<Button variant="link">Log in</Button>
-							<Button>Sign up</Button>
+						<div className="flex items-center">
+							<Button
+								variant="link"
+								asChild
+							>
+								<Link
+									href="/sign-in"
+									title="Sign in account"
+								>
+									Sign In
+								</Link>
+							</Button>
+							<Button asChild>
+								<Link
+									href="/sign-up"
+									title="Create a account"
+								>
+									Sign up
+								</Link>
+							</Button>
 						</div>
 					</div>
 				</div>

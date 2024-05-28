@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+// image
+img {
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	width: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-text-fill-color: #171717;
+	-webkit-box-shadow: 0 0 0px 1000px hsla(0, 0%, 96%, 0) inset;
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+// title
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-primary capitalize;
+}
+
+.h4_title {
+	@apply text-4xl font-normal leading-[120%];
+}
+
 /* container */
 .container {
 	@apply mx-auto w-full max-w-full;
@@ -22,6 +58,21 @@
 	}
 }
 
+// auth page
+
+.auth_page_wp {
+	padding: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+}
+
+// static image
+.static_dark_icon {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
+}
+
+.static_light_icon {
+	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
 /* dark theme css */
 
 .dark {
@@ -33,6 +84,3 @@
 		filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
 	}
 }
-
-/* import components files */
-@import "../_styles/header.scss";

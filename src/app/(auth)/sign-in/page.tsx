@@ -1,7 +1,11 @@
-import React from "react";
+import AuthWrapperProps from "@/components/auth-wrapper";
 
 const SignIn = () => {
-     return <div>Hello SignIn</div>;
+	return (
+		<>
+			<AuthWrapperProps page="sign-in">Sign In</AuthWrapperProps>
+		</>
+	);
 };
 
 export default SignIn;
