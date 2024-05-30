@@ -31,7 +31,7 @@ const ThemeToggle = () => {
 
 	return (
 		<div
-			className="theme_mode flex items-center"
+			className={`theme_mode flex items-center ${`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}`}
 			onClick={toggleTheme}
 		>
 			<div className="option_wp">
@@ -47,10 +47,7 @@ const ThemeToggle = () => {
 			</div>
 
 			<div className="ml-auto">
-				<Switch
-					id="theme-mode"
-					className={`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}
-				/>
+				<Switch id="theme-mode" />
 			</div>
 		</div>
 	);
