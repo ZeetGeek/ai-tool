@@ -20,7 +20,7 @@ const SignUp = () => {
 						<div className="form_field">
 							{/* first name */}
 							<div className="field">
-								<User className="field_icon" />
+								<User className="icon_24 text-neutral-500" />
 								<Input
 									type="text"
 									placeholder="First Name"
@@ -29,7 +29,7 @@ const SignUp = () => {
 
 							{/* last name */}
 							<div className="field">
-								<User className="field_icon" />
+								<User className="icon_24 text-neutral-500" />
 								<Input
 									type="email"
 									placeholder="Last Name"
@@ -40,7 +40,7 @@ const SignUp = () => {
 						{/* email */}
 						<div className="form_field">
 							<div className="field">
-								<Mail className="field_icon" />
+								<Mail className="icon_24 text-neutral-500" />
 								<Input
 									type="email"
 									placeholder="Email"
@@ -51,7 +51,7 @@ const SignUp = () => {
 						{/* password */}
 						<div className="form_field">
 							<div className="field">
-								<PasswordCursor className="field_icon" />
+								<PasswordCursor className="icon_24 text-neutral-500" />
 								<Input
 									type={show ? "text" : "password"}
 									placeholder="Password"
@@ -64,20 +64,20 @@ const SignUp = () => {
 										isShow(!show);
 									}}
 								>
-									{show ? <EyeClosed className="field_icon" /> : <Eye className="field_icon" />}
+									{show ? <EyeClosed className="icon_24 text-neutral-500" /> : <Eye className="icon_24 text-neutral-500" />}
 								</Button>
 							</div>
 						</div>
 
 						{/* terms and condition */}
-						<div className="flex items-center space-x-2">
+						<div className="group flex items-center space-x-2">
 							<Checkbox
 								id="terms"
 								className="mt-[-2px]"
 							/>
 							<label
 								htmlFor="terms"
-								className="text-lg font-medium leading-[160%] text-neutral-500"
+								className="hover_effect cursor-pointer text-lg font-medium capitalize leading-[160%] text-neutral-500 group-hover:text-neutral-800"
 							>
 								I Agree with
 								<Link
@@ -102,7 +102,7 @@ const SignUp = () => {
 						</div>
 
 						{/* sign up button */}
-						<Button type="submit">Sign Up</Button>
+						<Button type="submit" >Sign Up</Button>
 					</div>
 				</form>
 			</AuthWrapperProps>

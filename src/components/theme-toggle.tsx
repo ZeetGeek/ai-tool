@@ -1,5 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { HalfMoon, SunLight } from "iconoir-react";
 
 const ThemeToggle = () => {
 	const [theme, setTheme] = useState("light");
@@ -27,12 +30,29 @@ const ThemeToggle = () => {
 	};
 
 	return (
-		<button
-			className="m-4 rounded-md bg-neutral-100 px-4 py-2  hover:bg-neutral-300 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-600"
+		<div
+			className="theme_mode flex items-center"
 			onClick={toggleTheme}
 		>
-			Toggle Theme
-		</button>
+			<div className="option_wp">
+				{theme === "light" ? <HalfMoon className="icon_24" /> : <SunLight className="icon_24" />}
+
+				{/* page url */}
+				<Label
+					htmlFor="theme-mode"
+					className="text-base font-medium text-neutral-800"
+				>
+					Dark Mode
+				</Label>
+			</div>
+
+			<div className="ml-auto">
+				<Switch
+					id="theme-mode"
+					className={`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}
+				/>
+			</div>
+		</div>
 	);
 };
 

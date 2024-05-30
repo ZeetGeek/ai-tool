@@ -45,6 +45,13 @@ const config = {
 			padding: {
 				"26": "100px",
 			},
+
+			// box shadow
+			boxShadow: {
+				hover_dropdown: "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+			},
+
+			// keyframes
 			keyframes: {
 				"accordion-down": {
 					from: { height: "0" },
@@ -55,6 +62,8 @@ const config = {
 					to: { height: "0" },
 				},
 			},
+
+			// animation
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",

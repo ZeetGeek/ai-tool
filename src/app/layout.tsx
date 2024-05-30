@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import Layout from "@/components/layout";
+import LayoutWrapper from "@/components/layout-wrapper";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.scss";
@@ -35,9 +35,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<>
-			<html lang="en">
+			<html lang="en" >
 				<body className={`${poppins.variable} ${glancyr.variable} font-secondary `}>
-					<Layout>{children}</Layout>
+					<LayoutWrapper>{children}</LayoutWrapper>
 					<Analytics />
 					<SpeedInsights />
 				</body>

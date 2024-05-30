@@ -5,9 +5,8 @@ import signInImage from "@/images/auth-imgs/signin-img.png";
 import signUpImage from "@/images/auth-imgs/signup-img.png";
 import Logo from "./logo";
 
-import appleIcon from "@/images/icons/apple-icon.png";
-import googleIcon from "@/images/icons/google-icon.png";
-import twitterIcon from "@/images/icons/twitter-icon.png";
+import { AppleMac, GoogleCircle, X } from "iconoir-react";
+import Link from "next/link";
 
 interface AuthWrapperProps {
 	children: React.ReactNode;
@@ -24,17 +23,16 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 						<div className="flex w-full max-w-[600px] flex-col items-center">
 							{/* logo */}
 							<Logo
-								href="#"
+								href="/"
 								variant={page === "sign-in" ? "secondary" : "primary"}
 							/>
 							{/* welcome massage */}
 							<div className="mt-9 text-center">
 								<h1 className="h4_title mb-3">{page === "sign-in" ? <>Welcome Back!</> : <>Join Us Today!</>}</h1>
-								<p className="text-lg font-medium capitalize text-neutral-500">Sign up to access the latest AI tools and resources.</p>
+								<p className="text-lg font-medium capitalize text-neutral-500">{page === "sign-in" ? "Sign in to explore the latest AI tools and resources." : "Sign up to access the latest AI tools and resources."} </p>
 							</div>
 
 							{/* form */}
-
 							<div className="mb-8 mt-10 w-full">{children}</div>
 
 							{/* divider */}
@@ -47,35 +45,32 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 							{/* authentication platforms */}
 							<div className="mt-8 flex w-full items-center gap-8">
 								<button className="auth_platform_btn">
-									<Image
-										src={appleIcon}
-										height={24}
-										width={24}
-										alt="Apple icon"
-									/>
+									<AppleMac className="icon_24 text-neutral-800" />
 								</button>
 								<button className="auth_platform_btn">
-									<Image
-										src={googleIcon}
-										height={24}
-										width={24}
-										alt="Google icon"
-									/>
+									<GoogleCircle className="icon_24 text-neutral-800" />
 								</button>
 								<button className="auth_platform_btn">
-									<Image
-										src={twitterIcon}
-										height={24}
-										width={24}
-										alt="Twitter icon"
-									/>
+									<X className="icon_24 text-neutral-800" />
 								</button>
 							</div>
+
+							{/* account option */}
+							<p className="mt-10 inline-block">
+								<span className="text-lg font-medium text-neutral-500">{page === "sign-in" ? "Don’t have an account yet?" : "If You have an account?"}</span>{" "}
+								<Link
+									className="hover_effect text-neutral-800 hover:underline hover:underline-offset-4"
+									href={page === "sign-in" ? "/sign-up" : "/sign-in"}
+									title={page === "sign-in" ? "Sign up" : "Sign in"}
+								>
+									{page === "sign-in" ? "Sign Up" : "Sign In"}
+								</Link>
+							</p>
 						</div>
 					</div>
 
 					{/* Image */}
-					<div className={`${page === "sign-in" ? "order-1" : "order-2"} h-full w-6/12 ${page === "sign-in" ? "bg-primary-600" : "bg-secondary-600"} flex items-center justify-center rounded-3xl p-6`}>
+					<div className={`${page === "sign-in" ? "order-1" : "order-2 scale-x-[-1]"} h-full w-6/12 ${page === "sign-in" ? "bg-primary-600" : "bg-secondary-600"} flex items-center justify-center rounded-3xl p-6`}>
 						<Image
 							src={page === "sign-in" ? signInImage : signUpImage}
 							height={800}

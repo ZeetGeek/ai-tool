@@ -43,7 +43,7 @@ const NavigationMenuTrigger = React.forwardRef<React.ElementRef<typeof Navigatio
 			strokeWidth={2}
 			height={20}
 			width={20}
-			className="header_dropdown_icon relative  text-neutral-400 transition duration-200 group-hover:text-neutral-800 group-data-[state=open]:rotate-180 dark:group-hover:text-white"
+			className="nav_menu_dropdown_icon hover_effect group-data-[state=open]:rotate-180"
 			aria-hidden="true"
 		/>
 	</NavigationMenuPrimitive.Trigger>
@@ -65,10 +65,10 @@ NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName;
 const NavigationMenuLink = NavigationMenuPrimitive.Link;
 
 const NavigationMenuViewport = React.forwardRef<React.ElementRef<typeof NavigationMenuPrimitive.Viewport>, React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>>(({ className, ...props }, ref) => (
-	<div className={cn("absolute left-0 top-full flex justify-center")}>
+	<div className={cn("navigation_menu_viewport absolute left-0 top-full flex justify-center")}>
 		<NavigationMenuPrimitive.Viewport
 			className={cn(
-				"origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border border-neutral-200 bg-white text-neutral-950 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50 md:w-[var(--radix-navigation-menu-viewport-width)]",
+				"origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-50 text-neutral-950 shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50 md:w-[var(--radix-navigation-menu-viewport-width)]",
 				className
 			)}
 			ref={ref}

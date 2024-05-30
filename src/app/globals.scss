@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	@apply overflow-x-hidden;
+}
+
 // image
 img {
 	max-width: 100%;
@@ -10,6 +14,7 @@ img {
 	width: auto;
 }
 
+// input
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -38,6 +43,12 @@ h6 {
 	@apply text-4xl font-normal leading-[120%];
 }
 
+// hover effect
+
+.hover_effect {
+	@apply transition duration-200 ease-in-out;
+}
+
 /* container */
 .container {
 	@apply mx-auto w-full max-w-full;
@@ -58,10 +69,10 @@ h6 {
 	}
 }
 
-// auth page
+// icons
 
-.auth_page_wp {
-	padding: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+.icon_24 {
+	@apply h-6 w-6 stroke-2;
 }
 
 // static image

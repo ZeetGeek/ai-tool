@@ -1,42 +1,37 @@
-.form_field {
-	@apply flex items-center gap-8;
+.auth_page_wp {
+	padding: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
 
-	.field {
-		@apply relative flex w-full items-center gap-3 overflow-hidden rounded-lg bg-neutral-100 pl-6 hover:bg-neutral-200/70;
+	.form_field {
+		@apply flex items-center gap-8;
 
-		input {
-			@apply w-full bg-transparent py-4 pr-6 text-base font-medium text-neutral-900 outline-none;
-		}
+		.field {
+			@apply relative flex w-full items-center gap-3 overflow-hidden rounded-lg bg-neutral-100 pl-6 hover:bg-neutral-200/50;
 
-		input[type="password"] {
-			@apply pr-8;
-		}
+			input {
+				@apply w-full bg-transparent py-4 pr-6 text-base font-medium text-neutral-900 outline-none;
+			}
 
-		.field_icon {
-			@apply h-6 w-6 font-semibold text-neutral-500;
-			stroke-width: 2;
-		}
+			input[type="password"] {
+				@apply pr-8;
+			}
 
-		&:has(input:focus) {
-			@apply bg-neutral-200/70;
-		}
+			&:has(input:focus) {
+				@apply bg-neutral-200/70;
+			}
 
-		.pass_icon {
-			.field_icon {
-				@apply absolute right-0 top-[50%] -translate-x-6 translate-y-[-50%];
+			.pass_icon {
+				.icon_24 {
+					@apply absolute right-0 top-[50%] -translate-x-6 translate-y-[-50%];
+				}
 			}
 		}
 	}
-}
 
-.terms_links {
-	@apply text-blue-400 transition-colors duration-200 hover:text-blue-500;
-}
+	.terms_links {
+		@apply text-blue-400 hover:text-blue-500;
+	}
 
-.auth_platform_btn {
-	@apply w-full rounded-lg bg-neutral-100 py-[18px] transition-all duration-300 hover:bg-neutral-200;
-
-	img {
-		@apply mx-auto h-6 w-6;
+	.auth_platform_btn {
+		@apply transition duration-200 ease-in-out flex w-full items-center justify-center rounded-lg bg-neutral-100 py-[18px] hover:bg-neutral-200;
 	}
 }
