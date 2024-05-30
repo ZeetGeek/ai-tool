@@ -31,14 +31,11 @@
 	}
 
 	.option_wp {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 14px;
+		@apply flex items-center justify-start gap-[14px];
+	}
 
-		.icon_24 {
-			@apply stroke-2 text-neutral-800;
-		}
+	.option_wp .icon_24 {
+		@apply stroke-2 text-neutral-800;
 	}
 
 	.option_num {
@@ -53,17 +50,9 @@
 				@apply h-[15px] w-[15px];
 			}
 		}
+	}
 
-		&.light_theme {
-			.switch_thumb {
-				@apply data-[state=unchecked]:translate-x-0;
-			}
-		}
-
-		&.dark_theme {
-			.switch_thumb {
-				@apply data-[state=unchecked]:translate-x-[16px];
-			}
-		}
+	.profile_item {
+		@apply h-10 rounded-md px-2 transition-colors duration-200 ease-out hover:bg-neutral-200/40;
 	}
 }

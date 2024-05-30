@@ -19,7 +19,7 @@ const LayoutWrapper = ({ children }: ThemeProviderProps) => {
 	return (
 		<>
 			<AnimatePresence mode="wait">
-				<main className="bg-white text-neutral-800 dark:bg-neutral-950 dark:text-white">
+				<main className="bg_grid_image bg-white text-neutral-800 dark:bg-neutral-950 dark:text-white">
 					{pathName === "/sign-up" || pathName === "/sign-in" ? null : (
 						<>
 							<div className="pb-26 pt-8">

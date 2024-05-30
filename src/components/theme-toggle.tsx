@@ -30,26 +30,21 @@ const ThemeToggle = () => {
 	};
 
 	return (
-		<div
-			className={`theme_mode flex items-center ${`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}`}
+		<button
+			className={`theme_mode profile_item flex w-full items-center ${`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}`}
 			onClick={toggleTheme}
 		>
 			<div className="option_wp">
 				{theme === "light" ? <HalfMoon className="icon_24" /> : <SunLight className="icon_24" />}
 
 				{/* page url */}
-				<Label
-					htmlFor="theme-mode"
-					className="text-base font-medium text-neutral-800"
-				>
-					Dark Mode
-				</Label>
+				<span className="text-base font-medium text-neutral-800">Dark Mode</span>
 			</div>
 
 			<div className="ml-auto">
 				<Switch id="theme-mode" />
 			</div>
-		</div>
+		</button>
 	);
 };
 

@@ -29,7 +29,7 @@ const UserProfile = () => {
 									{/* user name */}
 									<div className="flex flex-col items-start">
 										<div className="flex items-center gap-1">
-											<span className="text-base font-medium capitalize text-neutral-800">Hey</span>
+											<span className="text-base font-medium capitalize text-neutral-800">Hey,</span>
 											<Image
 												className="h-[22px] w-[22px]"
 												src={okayEmoji}
@@ -38,7 +38,7 @@ const UserProfile = () => {
 												alt="Okay emoji"
 											/>
 										</div>
-										<span className="font-semibold capitalize text-primary-600">Devon Lane!</span>
+										<span className="w-full max-w-40 truncate font-semibold capitalize text-primary-600">Devon Lane!</span>
 									</div>
 								</div>
 							</NavigationMenuTrigger>
@@ -68,13 +68,13 @@ const UserProfile = () => {
 									<div className="my-4 h-[1px] w-full bg-neutral-200"></div>
 
 									{/* user options */}
-									<ul className="user_options flex flex-col space-y-[14px] ">
+									<ul className="user_options flex flex-col space-y-1 ">
 										{userProfile.map((item) => (
 											<li key={item.id}>
 												<Link
 													href={item.href}
 													title={item.name}
-													className="flex items-center"
+													className="profile_item flex items-center"
 												>
 													<div className="option_wp">
 														{/* icon */}
@@ -107,10 +107,10 @@ const UserProfile = () => {
 									<div className="my-4 h-[1px] w-full bg-neutral-200"></div>
 
 									{/* sign out */}
-									<div className="option_wp mb-1">
+									<button className="option_wp profile_item mb-1 w-full cursor-pointer">
 										<LogOut className="icon_24" />
 										<span className="text-base font-medium text-neutral-800">Sign Out</span>
-									</div>
+									</button>
 								</div>
 							</NavigationMenuContent>
 						</NavigationMenuItem>

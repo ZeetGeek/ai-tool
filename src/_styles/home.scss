@@ -1,0 +1,5 @@
+.home_page {
+	.banner_ai_img:not(:first-child) {
+		@apply -ml-5;
+	}
+}
