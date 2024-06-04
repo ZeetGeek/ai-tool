@@ -1,7 +1,14 @@
+// tailwind css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// swiper js
+@import url("swiper/css");
+@import url("swiper/css/pagination");
+@import url("swiper/css/free-mode");
+
+// global css
 html {
 	@apply overflow-x-hidden;
 }
@@ -140,6 +147,14 @@ h6 {
 	&.sm {
 		@apply text-sm leading-[180%];
 	}
+
+	&:has(.highlight) {
+		@apply mt-3 flex items-center gap-3;
+	}
+
+	.highlight {
+		@apply inline-block rounded-full border-2 border-neutral-500 px-6 py-2;
+	}
 }
 
 // hover effect
@@ -151,12 +166,17 @@ h6 {
 // content center
 
 .center_box {
-	@apply mx-auto w-8/12;
+	@apply mx-auto w-8/12 text-center;
+
+	h1,
+	h2 {
+		@apply mb-6;
+	}
 }
 
 /* container */
 .container {
-	@apply mx-auto w-full max-w-full;
+	@apply relative mx-auto w-full max-w-[1920px];
 	padding-inline: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
 }
 
@@ -181,6 +201,7 @@ h6 {
 }
 
 // static image
+
 .static_dark_icon {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
 }
@@ -198,5 +219,29 @@ h6 {
 
 	.static_light_icon {
 		filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
+	}
+}
+
+// ai tools category
+
+.category_box {
+	@apply hover_effect rounded-lg bg-neutral-100 px-6 py-2 text-base font-medium capitalize  text-neutral-400 hover:bg-neutral-200/60;
+
+	&.active {
+		@apply bg-secondary-600 text-neutral-800;
+	}
+}
+
+// dropdown btn
+
+.dropdown_btn {
+	@apply hover_effect h-[53px] rounded-lg bg-neutral-100 px-8 py-3 text-base text-neutral-800 hover:bg-neutral-200/60;
+}
+
+// ai tool box
+
+.ai_tool_box {
+	.box_btn {
+		@apply hover_effect flex h-12 w-12 rounded-full;
 	}
 }

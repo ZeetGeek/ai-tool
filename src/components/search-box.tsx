@@ -7,7 +7,7 @@ const SearchBox = () => {
 		<>
 			<div className="mx-auto flex items-center justify-center gap-4 ">
 				{/* search input */}
-				<div className="search_box flex h-[60px] w-full max-w-[500px] items-center justify-between gap-3 rounded-xl bg-neutral-100 px-6 hover:bg-neutral-200/50">
+				<div className="search_box flex h-[60px] w-full max-w-[500px] items-center justify-between gap-3 rounded-xl bg-neutral-100 px-6 hover:bg-neutral-200/60">
 					<div className="flex w-full flex-1 items-center gap-3">
 						<Search className="icon_24 text-neutral-500" />
 						<Input

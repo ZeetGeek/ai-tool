@@ -7,7 +7,7 @@ interface HeaderLinksProps {
 export const headerLinks: HeaderLinksProps[] = [
 	{
 		id: 0,
-		title: "AI Tools",
+		title: "Home",
 		href: "/",
 	},
 	{

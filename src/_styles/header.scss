@@ -27,7 +27,7 @@
 
 .user_profile {
 	.navigation_menu_viewport {
-		@apply left-[-90px];
+		@apply left-[-90px] top-full;
 	}
 
 	.option_wp {
@@ -53,6 +53,6 @@
 	}
 
 	.profile_item {
-		@apply h-10 rounded-md px-2 transition-colors duration-200 ease-out hover:bg-neutral-200/40;
+		@apply h-10 rounded-md px-2 transition-colors duration-200 ease-out hover:bg-neutral-200/60;
 	}
 }

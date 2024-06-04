@@ -44,6 +44,7 @@ const config = {
 			// padding
 			padding: {
 				"26": "100px",
+				"30": "120px",
 			},
 
 			// box shadow
@@ -67,6 +68,11 @@ const config = {
 			animation: {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
+			},
+
+			// border radius
+			borderRadius: {
+				"4xl": "32px",
 			},
 		},
 	},
