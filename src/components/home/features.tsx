@@ -27,7 +27,7 @@ const Features = () => {
 						</div>
 
 						{/* all features */}
-						<div className="features_wp mt-10 grid grid-cols-12 grid-rows-2 gap-6">
+						<div className="features_wp grid grid-cols-12 grid-rows-2 gap-6">
 							{featuresData.map((item, index) => (
 								<div
 									className="feature_box"

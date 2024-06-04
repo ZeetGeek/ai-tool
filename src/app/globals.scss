@@ -168,9 +168,12 @@ h6 {
 .center_box {
 	@apply mx-auto w-8/12 text-center;
 
-	h1,
 	h2 {
 		@apply mb-6;
+	}
+
+	&:has(h2) {
+		@apply mb-10;
 	}
 }
 

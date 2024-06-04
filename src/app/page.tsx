@@ -1,6 +1,7 @@
 import Banner from "@/components/home/banner";
 import AiTools from "@/components/home/ai-tools";
-import Features from "@/components/home/features"
+import Features from "@/components/home/features";
+import HomeCategories from "@/components/home/home-categories";
 import "@/style/home.scss";
 
 const Home = () => {
@@ -15,6 +16,10 @@ const Home = () => {
 			</div>
 
 			<Features />
+
+			<div className="py-30">
+				<HomeCategories />
+			</div>
 		</div>
 	);
 };

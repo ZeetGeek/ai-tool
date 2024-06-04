@@ -21,9 +21,10 @@ interface AiToolBoxProps {
 	href: string;
 	hideSave?: boolean;
 	hideNavigate?: boolean;
+	className?: string;
 }
 
-const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, categories, href, hideSave, hideNavigate }: AiToolBoxProps) => {
+const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, categories, href, hideSave, hideNavigate, className }: AiToolBoxProps) => {
 	// router navigation
 	const router = useRouter();
 
@@ -36,7 +37,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				onClick={(e) => {
 					router.push(href, { scroll: false });
 				}}
-				className={`hover_effect ai_tool_box relative h-[327px] cursor-pointer rounded-2xl bg-neutral-100 p-6 hover:bg-neutral-200/60`}
+				className={`${className} hover_effect ai_tool_box relative h-[327px] w-full cursor-pointer rounded-2xl bg-neutral-100 p-6 hover:bg-neutral-200`}
 			>
 				{/* logo, name, rating, review */}
 				<div className="flex items-center gap-3">

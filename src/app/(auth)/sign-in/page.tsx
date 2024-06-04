@@ -35,6 +35,8 @@ const SignIn = () => {
 									type={show ? "text" : "password"}
 									placeholder="Password"
 								/>
+
+								{/* // TODO add name to all buttons */}
 								<Button
 									variant="ghost"
 									className="pass_icon p-1"
