@@ -36,7 +36,7 @@ const SignIn = () => {
 									placeholder="Password"
 								/>
 
-								{/* // TODO add name to all buttons */}
+								{/* // TODO add name to all buttons and also change color when i click on button using action */}
 								<Button
 									variant="ghost"
 									className="pass_icon p-1"

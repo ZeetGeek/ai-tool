@@ -3,8 +3,9 @@ import AiTools from "@/components/home/ai-tools";
 import Features from "@/components/home/features";
 import HomeCategories from "@/components/home/home-categories";
 import AiToolsHub from "@/components/home/ai-tools-hub";
-import "@/style/home.scss";
 import { Newsletter } from "@/components/newsletter";
+import Footer from "@/components/footer";
+import "@/style/home.scss";
 
 const Home = () => {
 	return (
@@ -32,6 +33,9 @@ const Home = () => {
 			<div className="py-30">
 				<Newsletter />
 			</div>
+
+			{/* footer */}
+			<Footer />
 		</div>
 	);
 };
