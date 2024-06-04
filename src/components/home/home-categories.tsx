@@ -82,6 +82,16 @@ const HomeCategories = () => {
 								)
 						)}
 					</div>
+
+					{/* load more btn */}
+					<div className="mt-10 flex">
+						<Button
+							className="m-auto"
+							size={"lg"}
+						>
+							Load More Categories
+						</Button>
+					</div>
 				</div>
 			</section>
 		</>

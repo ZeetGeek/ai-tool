@@ -169,7 +169,7 @@ h6 {
 	@apply mx-auto w-8/12 text-center;
 
 	h2 {
-		@apply mb-6;
+		@apply mb-4;
 	}
 
 	&:has(h2) {
@@ -228,7 +228,7 @@ h6 {
 // ai tools category
 
 .category_box {
-	@apply hover_effect rounded-lg bg-neutral-100 px-6 py-2 text-base font-medium capitalize  text-neutral-400 hover:bg-neutral-200/60;
+	@apply hover_effect rounded-lg bg-neutral-100 px-6 py-[10px] text-base font-medium capitalize  text-neutral-400 hover:bg-neutral-200/60;
 
 	&.active {
 		@apply bg-secondary-600 text-neutral-800;

@@ -2,6 +2,7 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 interface AiToolsCategoryProps {
 	data: string[];
@@ -13,7 +14,13 @@ const AiToolsCategory = ({ data }: AiToolsCategoryProps) => {
 			<Swiper
 				slidesPerView={"auto"}
 				spaceBetween={24}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false,
+				}}
+				loop={true}
 				className="mySwiper"
+				modules={[Autoplay]}
 			>
 				{data.map((item, index) => (
 					<SwiperSlide

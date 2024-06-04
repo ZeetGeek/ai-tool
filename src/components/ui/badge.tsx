@@ -12,7 +12,7 @@ const badgeVariants = cva("hover_effect inline-flex items-center rounded-full px
 			active_deal: "bg-green-500/20 hover:bg-green-600/20 text-green-600 font-semibold",
 			freemium: "bg-sky-500/20 hover:bg-sky-600/20 text-sky-500 font-semibold",
 			free_trail: "bg-orange-500/20 hover:bg-orange-600/20 text-orange-500 font-semibold",
-			outline: "border-[1.5px] border-neutral-800 font-medium text-neutral-800 hover:bg-neutral-200",
+			outline: "border-[1.5px] border-neutral-800 font-medium text-neutral-800 hover:bg-neutral-300/80",
 		},
 	},
 	defaultVariants: {
