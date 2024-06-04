@@ -1,11 +1,7 @@
-import ThemeToggle from "@/components/theme-toggle";
+import React from "react";
 
 const Test = () => {
-	return (
-		<>
-			<ThemeToggle />
-		</>
-	);
+	return <div>Test</div>;
 };
 
 export default Test;

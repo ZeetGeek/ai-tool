@@ -213,18 +213,6 @@ h6 {
 	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
-/* dark theme css */
-
-.dark {
-	.static_dark_icon {
-		filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-	}
-
-	.static_light_icon {
-		filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
-	}
-}
-
 // ai tools category
 
 .category_box {
@@ -246,5 +234,38 @@ h6 {
 .ai_tool_box {
 	.box_btn {
 		@apply hover_effect flex h-12 w-12 rounded-full;
+	}
+}
+
+// newsletter
+
+.newsletter {
+	.newsletter_wp {
+		&::before {
+			content: "";
+			position: absolute;
+			height: 654px;
+			width: 654px;
+			top: 50%;
+			right: -95px;
+			transform: translateY(-50%);
+			z-index: -1;
+			background-image: url("../_assets/images/newsletter-bg-shape.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+/* dark theme css */
+
+.dark {
+	.static_dark_icon {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+	}
+
+	.static_light_icon {
+		filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
 	}
 }

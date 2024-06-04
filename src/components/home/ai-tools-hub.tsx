@@ -2,6 +2,7 @@ import Title from "../ui/title";
 import Des from "../ui/description";
 import { aiToolsData } from "@/data/ai-tools";
 import AiToolBox from "../ai-tool-box";
+import { Button } from "../ui/button";
 
 const AiToolsHub = () => {
 	const categoryOptions = ["Featured", "Free", "Paid", "Popular", "New"];
@@ -10,13 +11,14 @@ const AiToolsHub = () => {
 		<section className="ai_tools_hub">
 			<div className="container">
 				<div className="center_box">
-					{/* title and description */}
+					{/* title */}
 					<Title
 						size="h2"
 						className="text-neutral-800"
 					>
 						AI Tool Hub
 					</Title>
+					{/* description */}
 					<Des
 						size="lg"
 						className="text-neutral-500"
@@ -54,6 +56,11 @@ const AiToolsHub = () => {
 							{...item}
 						/>
 					))}
+				</div>
+
+				{/* load more  */}
+				<div className="mt-10 flex">
+					<Button size="lg" className="m-auto" >Load More AI Tools</Button>
 				</div>
 			</div>
 		</section>

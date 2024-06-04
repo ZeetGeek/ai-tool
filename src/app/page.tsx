@@ -4,6 +4,7 @@ import Features from "@/components/home/features";
 import HomeCategories from "@/components/home/home-categories";
 import AiToolsHub from "@/components/home/ai-tools-hub";
 import "@/style/home.scss";
+import { Newsletter } from "@/components/newsletter";
 
 const Home = () => {
 	return (
@@ -26,6 +27,11 @@ const Home = () => {
 
 			{/* ai tools hub */}
 			<AiToolsHub />
+
+			{/* newsletter  */}
+			<div className="py-30">
+				<Newsletter />
+			</div>
 		</div>
 	);
 };
