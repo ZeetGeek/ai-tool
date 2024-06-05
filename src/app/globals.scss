@@ -269,3 +269,9 @@ h6 {
 		filter: brightness(0) saturate(100%) invert(0%) sepia(84%) saturate(4189%) hue-rotate(96deg) brightness(88%) contrast(92%);
 	}
 }
+
+// social media links 
+
+.social_media_link {
+	@apply inline-flex items-start gap-[10px] text-neutral-500  transition-colors duration-300 hover:text-neutral-800;
+}
