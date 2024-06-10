@@ -3,7 +3,7 @@ import Logo from "./logo";
 import Des from "./ui/description";
 import Link from "next/link";
 import Title from "./ui/title";
-import { categoriesData, pagesData, legalData } from "@/data/page-links";
+import { categoriesData, pageData, legalData } from "@/data/page-links";
 import SocialLinks from "./social-links";
 import "@/style/footer.scss";
 
@@ -13,9 +13,9 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="container">
-				<div className="flex items-start justify-between">
+				<div className="flex flex-wrap items-start justify-between gap-6">
 					{/* logo and contact info */}
-					<div className="flex w-full max-w-[500px] flex-col items-start">
+					<div className="flex flex-col items-start sm:w-6/12 md:bg-red-500 xl:w-full xl:max-w-[500px] xl:bg-red-200">
 						{/* logo */}
 						<Logo href="/" />
 
@@ -29,27 +29,27 @@ const Footer = () => {
 							</Des>
 						</div>
 
-						<div className="flex items-center gap-6">
+						<div className="phone_email_box_wp ">
 							{/* // TODO make this email and number box into component  */}
 							<Link
 								href="tel:+911234567890"
 								title="Our contact number"
-								className="hover_effect inline-flex gap-3 rounded-lg bg-primary-600 px-6 py-4 text-base font-medium text-white hover:bg-primary-500"
+								className="phone_box"
 							>
-								<Phone className="icon_24 text-white" /> +91 1234567890
+								<Phone className="icon_24" /> +91 1234567890
 							</Link>
 							<Link
 								href="mailto:aiverce@gmail.com"
 								title="Our email address"
-								className="hover_effect inline-flex gap-3 rounded-lg bg-neutral-800 px-6 py-4 text-base font-medium text-white hover:bg-neutral-700"
+								className="email_box"
 							>
-								<SendMail className="icon_24 text-white" /> aiverce@gmail.com
+								<SendMail className="icon_24" /> aiverce@gmail.com
 							</Link>
 						</div>
 					</div>
 
 					{/* categories */}
-					<div className="footer_wp">
+					<div className="footer_wp md:w-5/12 md:bg-blue-400 xl:w-auto xl:bg-blue-200">
 						<Title
 							size="h6"
 							className="footer_links_title"
@@ -57,17 +57,15 @@ const Footer = () => {
 							Categories
 						</Title>
 						<ul className="footer_links">
-							{categoriesData.map((item, index) => {
-								const link = item.replace(/\s+/g, "-").toLowerCase();
-
+							{categoriesData.map((link, index) => {
 								return (
 									<li key={index}>
 										<Link
 											className="footer_link"
-											href={`/${link}`}
-											title={item}
+											href={link.href}
+											title={link.title}
 										>
-											{item}
+											{link.title}
 										</Link>
 									</li>
 								);
@@ -84,17 +82,15 @@ const Footer = () => {
 							Pages
 						</Title>
 						<ul className="footer_links">
-							{pagesData.map((item, index) => {
-								const link = item.replace(/\s+/g, "-").toLowerCase();
-
+							{pageData.map((link, index) => {
 								return (
 									<li key={index}>
 										<Link
 											className="footer_link"
-											href={`${link === "home" ? "/" : `/${link}`}`}
-											title={item}
+											href={link.href}
+											title={link.title}
 										>
-											{item}
+											{link.title}
 										</Link>
 									</li>
 								);
@@ -111,17 +107,15 @@ const Footer = () => {
 							Pages
 						</Title>
 						<ul className="footer_links">
-							{legalData.map((item, index) => {
-								const link = item.replace(/\s+/g, "-").toLowerCase();
-
+							{legalData.map((link, index) => {
 								return (
 									<li key={index}>
 										<Link
 											className="footer_link"
-											href={`${link === "home" ? "/" : `/${link}`}`}
-											title={item}
+											href={link.href}
+											title={link.title}
 										>
-											{item}
+											{link.title}
 										</Link>
 									</li>
 								);

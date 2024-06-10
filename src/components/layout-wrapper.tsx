@@ -29,7 +29,7 @@ const LayoutWrapper = ({ children }: ThemeProviderProps) => {
 						</>
 					)}
 					{children}
-					{/* <Footer /> */}
+					<Footer />
 				</main>
 			</AnimatePresence>
 		</>
