@@ -17,7 +17,7 @@ const Header = ({ isLogged }: HeaderProps) => {
 				<div className="container">
 					<div className="flex items-center justify-between">
 						{/* sidebar & logo */}
-						<div className="inline-flex items-center gap-5">
+						<div className="inline-flex items-center gap-2 lg:gap-5">
 							{/* sidebar */}
 							<HeaderSidebar />
 							{/* logo */}
@@ -25,7 +25,9 @@ const Header = ({ isLogged }: HeaderProps) => {
 						</div>
 
 						{/* nav links */}
-						<NavLinks />
+						<div className="hidden lg:block">
+							<NavLinks />
+						</div>
 
 						{isLogged ? (
 							<>

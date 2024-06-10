@@ -1,4 +1,6 @@
 .nav_links {
+	@apply flex flex-col items-start space-x-0 space-y-6 lg:flex-row lg:items-center lg:space-x-10 lg:space-y-0;
+
 	.header_link {
 		@apply inline-flex px-1 text-base font-medium text-neutral-400 transition duration-200 ease-in-out hover:text-neutral-800  dark:hover:text-white;
 
@@ -27,7 +29,7 @@
 
 .user_profile {
 	.navigation_menu_viewport {
-		@apply left-[-90px] top-full;
+		@apply left-[-210px] top-full vsm:left-[-110px]  lg:left-[-90px];
 	}
 
 	.option_wp {

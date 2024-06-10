@@ -15,36 +15,39 @@ const UserProfile = () => {
 					<NavigationMenuList>
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>
-								<div className="flex items-center gap-4">
+								<div className="flex items-center gap-4 pt-2">
 									{/* user profile */}
-									<div className="h-14 w-14 overflow-hidden rounded-2xl">
+									<div className="flex h-11 w-11 overflow-hidden rounded-md lg:h-14 lg:w-14 lg:rounded-2xl">
 										<Image
 											src={userImage}
 											height={56}
 											width={56}
 											alt="Profile image"
+											className="m-auto"
 										/>
 									</div>
 
 									{/* user name */}
-									<div className="flex flex-col items-start">
-										<div className="flex items-center gap-1">
-											<span className="text-base font-medium capitalize text-neutral-800">Hey,</span>
-											<Image
-												className="h-[22px] w-[22px]"
-												src={okayEmoji}
-												height={22}
-												width={22}
-												alt="Okay emoji"
-											/>
+									<div className="vsm:block hidden">
+										<div className="flex flex-col items-start">
+											<div className="flex items-center gap-1">
+												<span className="text-base font-medium capitalize text-neutral-800">Hey,</span>
+												<Image
+													className="h-[22px] w-[22px]"
+													src={okayEmoji}
+													height={22}
+													width={22}
+													alt="Okay emoji"
+												/>
+											</div>
+											<span className="w-full max-w-40 truncate font-semibold capitalize text-primary-600">Devon Lane!</span>
 										</div>
-										<span className="w-full max-w-40 truncate font-semibold capitalize text-primary-600">Devon Lane!</span>
 									</div>
 								</div>
 							</NavigationMenuTrigger>
 
 							<NavigationMenuContent>
-								<div className="p-4 md:w-[300px]">
+								<div className="vsm:w-[300px] w-[280px] p-4">
 									{/* user image, name & email */}
 									<div className="flex items-center gap-[10px]">
 										{/* user profile */}

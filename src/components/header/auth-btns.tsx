@@ -5,6 +5,7 @@ const AuthBtns = () => {
 	return (
 		<div className="flex items-center">
 			<Button
+				className="pl-0"
 				variant="link"
 				asChild
 			>
@@ -15,7 +16,10 @@ const AuthBtns = () => {
 					Sign In
 				</Link>
 			</Button>
-			<Button asChild>
+			<Button
+				size="md"
+				asChild
+			>
 				<Link
 					href="/sign-up"
 					title="Create a account"

@@ -6,6 +6,10 @@ const config = {
 	prefix: "",
 	theme: {
 		extend: {
+			screens: {
+				vsm: "480px",
+			},
+
 			// font family
 			fontFamily: {
 				primary: "var(--font-glancyr)",

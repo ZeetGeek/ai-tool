@@ -1,28 +1,51 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import menuIcon from "@/images/icons/menu-icon.svg";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import NavLinks from "./nav-links";
+import { headerLinks } from "@/data/page-links";
 
 const HeaderSidebar = () => {
+	const pathName = usePathname();
+
 	return (
-		<Sheet>
-			<SheetTrigger>
-				<div className="hover_effect rounded-md p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800">
-					<Image
-						src={menuIcon}
-						height={36}
-						width={36}
-						alt="menu icon"
-						className="static_dark_icon"
-					/>
-				</div>
-			</SheetTrigger>
-			<SheetContent side="left">
-				<SheetHeader>
-					<SheetTitle>Are you absolutely sure?</SheetTitle>
-					<SheetDescription>This action cannot be undone. This will permanently delete your account and remove your data from our servers.</SheetDescription>
-				</SheetHeader>
-			</SheetContent>
-		</Sheet>
+		<div className="sidebar_header">
+			<Sheet>
+				<SheetTrigger>
+					<div className="hover_effect rounded-md p-1 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+						<Image
+							src={menuIcon}
+							height={36}
+							width={36}
+							alt="menu icon"
+							className="static_dark_icon"
+						/>
+					</div>
+				</SheetTrigger>
+				<SheetContent side="left">
+					<SheetHeader>
+						<div className="block lg:hidden">
+							<ul className="nav_links">
+								{headerLinks.map((link) => (
+									<li key={link.id}>
+										<SheetClose asChild>
+											<Link
+												href={link.href}
+												title={link.title}
+												className={`${pathName === link.href ? "active" : ""} header_link`}
+											>
+												{link.title}
+											</Link>
+										</SheetClose>
+									</li>
+								))}
+							</ul>
+						</div>
+					</SheetHeader>
+				</SheetContent>
+			</Sheet>
+		</div>
 	);
 };
 
