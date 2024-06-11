@@ -15,7 +15,7 @@
 		}
 
 		&:nth-child(5) {
-			@media (width <= 768px) {
+			@media (width < 768px) {
 				align-items: center !important;
 			}
 		}

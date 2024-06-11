@@ -18,7 +18,7 @@ const Home = () => {
 			</div>
 
 			{/* features */}
-			{/* <Features /> */}
+			<Features />
 
 			{/* home categories */}
 			<div className="py-30">{/* <HomeCategories /> */}</div>

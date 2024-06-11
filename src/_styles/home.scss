@@ -19,7 +19,7 @@
 					top: 21px;
 					left: clamp(-1.875rem, -13.4464rem + 18.0804vw, 8.25rem);
 
-					@media (width <= 1536px) {
+					@media (width < 1536px) {
 						left: clamp(-1.875rem, -9.4464rem + 11.8304vw, 4.75rem);
 						top: clamp(7.3125rem, 14.1696rem + -10.7143vw, 1.3125rem);
 					}
@@ -38,7 +38,7 @@
 	.features {
 		.features_wp {
 			.feature_box {
-				@apply rounded-3xl p-6;
+				@apply rounded-3xl p-4 lg:p-6;
 
 				&:not(:last-child) {
 					@apply relative overflow-hidden;
@@ -55,6 +55,10 @@
 						-webkit-mask-repeat: no-repeat;
 						mask-repeat: no-repeat;
 					}
+				}
+
+				@media (width < 1360px) {
+					grid-area: unset !important;
 				}
 			}
 

@@ -21,6 +21,7 @@ const config = {
 			// font size
 			fontSize: {
 				"7xl": "clamp(2.625rem, 2.25rem + 1.875vw, 4.5rem)",
+				"6xl": "clamp(2.25rem, 1.5vw + 1.95rem, 3.75rem)",
 				"4xl": "clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem)",
 				"2xl": "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
 			},
@@ -56,12 +57,14 @@ const config = {
 
 			// padding
 			padding: {
+				"12": "clamp(1.25rem, 1.875vw + 0.875rem, 3.125rem)",
 				"20": "clamp(2.5rem, 2rem + 2.5vw, 5rem)",
 				"26": "100px",
 				"30": "clamp(3.75rem, 3rem + 3.75vw, 7.5rem)",
 			},
 
 			margin: {
+				"12": "clamp(1rem, -1.5rem + 8vw, 3rem)",
 				"20": "clamp(2.5rem, 2rem + 2.5vw, 5rem)",
 				"30": "clamp(3.75rem, 3rem + 3.75vw, 7.5rem)",
 			},

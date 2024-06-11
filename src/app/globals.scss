@@ -179,6 +179,12 @@ h6 {
 .container {
 	@apply relative mx-auto w-full max-w-[1920px];
 	padding-inline: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+
+	&.container_full {
+		@media (width < 640px) {
+			padding: 0;
+		}
+	}
 }
 
 /* logo */

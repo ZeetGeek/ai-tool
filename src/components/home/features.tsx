@@ -8,8 +8,8 @@ const Features = () => {
 	return (
 		<>
 			<section className="features">
-				<div className="container">
-					<div className="rounded-4xl bg-neutral-900 p-12">
+				<div className="container_full container">
+					<div className="rounded-2xl bg-neutral-900 px-12 py-20 sm:rounded-3xl lg:rounded-4xl lg:py-12">
 						{/* title and description */}
 						<div className="center_box">
 							<Title
@@ -27,16 +27,22 @@ const Features = () => {
 						</div>
 
 						{/* all features */}
-						<div className="features_wp grid grid-cols-12 grid-rows-2 gap-6">
+						<div className="features_wp xxl:grid-cols-12 xxl:grid-rows-2 grid grid-cols-1 gap-6 md:grid-cols-2">
 							{featuresData.map((item, index) => (
 								<div
 									className="feature_box"
 									key={index}
 								>
 									{/* title and icon */}
-									<div className="flex items-center justify-between">
-										<Title size="h4">{item.title}</Title>
+									<div className="flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
+										<Title
+											size="h4"
+											className="order-2 w-full flex-1 lg:order-1"
+										>
+											{item.title}
+										</Title>
 										<Image
+											className="order-1 lg:order-2"
 											src={item.icon}
 											height={100}
 											width={100}
@@ -51,7 +57,7 @@ const Features = () => {
 									<Des size="lg">{item.description}</Des>
 								</div>
 							))}
-							<div className="feature_box flex">
+							<div className="feature_box xxl:flex hidden">
 								<Image
 									src={botImage}
 									width={368}
