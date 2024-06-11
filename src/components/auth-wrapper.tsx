@@ -85,7 +85,6 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 							height={800}
 							width={800}
 							alt={`${page === "sign-in" ? "Sign in" : "Sign up"} image`}
-							placeholder="blur"
 						/>
 					</div>
 				</div>

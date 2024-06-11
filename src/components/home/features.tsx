@@ -46,7 +46,6 @@ const Features = () => {
 											src={item.icon}
 											height={100}
 											width={100}
-											placeholder="blur"
 											alt={`${item.title} icon`}
 										/>
 									</div>
@@ -64,7 +63,6 @@ const Features = () => {
 									height={520}
 									className="m-auto"
 									alt="feature bot image"
-									placeholder="blur"
 								/>
 							</div>
 						</div>

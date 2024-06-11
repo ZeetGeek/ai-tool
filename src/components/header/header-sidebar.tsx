@@ -20,7 +20,6 @@ const HeaderSidebar = () => {
 							width={36}
 							alt="menu icon"
 							className="static_dark_icon"
-							placeholder="blur"
 						/>
 					</div>
 				</SheetTrigger>

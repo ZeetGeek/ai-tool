@@ -35,7 +35,6 @@ const Banner = () => {
 												width={80}
 												height={80}
 												alt="ai tool logo"
-												placeholder="blur"
 												className="m-auto"
 											/>
 										</div>
@@ -71,14 +70,12 @@ const Banner = () => {
 							height={340}
 							width={340}
 							alt="ai bot image"
-							placeholder="blur"
 						/>
 						<Image
 							src={AiBotImg2}
 							height={300}
 							width={300}
 							alt="ai bot image"
-							placeholder="blur"
 						/>
 					</div>
 				</div>

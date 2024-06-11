@@ -48,7 +48,6 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 							height={72}
 							width={72}
 							alt={`${name} logo`}
-							placeholder="blur"
 						/>
 
 						{/* TODO: create this verified feature */}
