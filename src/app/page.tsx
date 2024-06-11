@@ -29,7 +29,9 @@ const Home = () => {
 			<AiToolsHub />
 
 			{/* newsletter  */}
-			<div className="py-30">{/* <Newsletter /> */}</div>
+			<div className="py-30">
+				<Newsletter />
+			</div>
 		</div>
 	);
 };
