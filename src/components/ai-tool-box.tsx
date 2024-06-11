@@ -37,25 +37,26 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				onClick={(e) => {
 					router.push(href, { scroll: false });
 				}}
-				className={`${className} hover_effect ai_tool_box relative h-[327px] w-full cursor-pointer rounded-2xl bg-neutral-100 p-6 hover:bg-neutral-200`}
+				className={`${className} hover_effect ai_tool_box relative w-full cursor-pointer rounded-2xl bg-neutral-100 p-6 hover:bg-neutral-200`}
 			>
 				{/* logo, name, rating, review */}
-				<div className="flex items-center gap-3">
+				<div className="flex flex-col items-start gap-3 vsm:flex-row vsm:items-center sm:flex-col sm:items-start md:flex-row md:items-center lg:flex-col lg:items-start  xl:flex-row xl:items-center">
 					{/* logo */}
-					<div className="relative flex h-[72px] w-[72px] overflow-hidden rounded-full">
+					<div className="ai_box_logo_image">
 						<Image
 							src={logo}
 							height={72}
 							width={72}
 							alt={`${name} logo`}
-							className="m-auto"
 							placeholder="blur"
 						/>
-						{verified && (
+
+						{/* TODO: create this verified feature */}
+						{/* {verified && (
 							<>
 								<h1>Verified</h1>
 							</>
-						)}
+						)} */}
 					</div>
 					{/* name, rating & reviews */}
 					<div className="flex flex-col items-start gap-[6px]">
@@ -88,7 +89,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				</div>
 
 				{/* description */}
-				<div className="mb-6 mt-4">
+				<div className="mb-6 mt-4  w-full vsm:w-11/12">
 					<Des
 						size="md"
 						className="capitalize text-neutral-500"
@@ -99,7 +100,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 
 				{/* categories */}
 
-				<div className="flex flex-wrap gap-2">
+				<div className="flex w-10/12 flex-wrap gap-2">
 					{categories.map((item, index) => (
 						<Badge
 							variant="outline"

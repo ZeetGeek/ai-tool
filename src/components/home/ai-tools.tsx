@@ -27,9 +27,9 @@ const AiTools = () => {
 					</div>
 
 					{/* title, description & filter options */}
-					<div className="mb-10 mt-20 flex items-center justify-between">
+					<div className="sec_title_options mb-10 mt-20 flex items-center justify-between">
 						{/* title & description */}
-						<div className="">
+						<div className="sec_title">
 							<Title size="h4">AI Productivity Tools</Title>
 							<Des size="md">
 								the productivity tools category <span className="highlight">We found 360 AI Tools results.</span> for personal assistants.
@@ -37,7 +37,7 @@ const AiTools = () => {
 						</div>
 
 						{/* filter option */}
-						<div className="flex items-center gap-6">
+						<div className="sec_option flex flex-col items-center gap-6 sm:flex-row">
 							{/* sub categories */}
 							<Select>
 								<SelectTrigger className="dropdown_btn">
@@ -61,7 +61,7 @@ const AiTools = () => {
 					</div>
 
 					{/* all tools */}
-					<div className="grid grid-cols-4 gap-6">
+					<div className="grid gap-6 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 ">
 						{aiToolsData.map((item) => (
 							<AiToolBox
 								key={item.id}

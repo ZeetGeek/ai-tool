@@ -135,7 +135,7 @@ h6 {
 	@apply font-medium capitalize;
 
 	&.lg {
-		@apply text-base leading-[170%] md:text-lg md:leading-[160%];
+		@apply text-base leading-[170%];
 	}
 
 	&.md {
@@ -147,11 +147,11 @@ h6 {
 	}
 
 	&:has(.highlight) {
-		@apply mt-3 flex items-center gap-3;
+		@apply mt-3 flex flex-wrap items-center gap-3;
 	}
 
 	.highlight {
-		@apply inline-block rounded-full border-2 border-neutral-500 px-6 py-2;
+		@apply inline-block rounded-full border-2 border-neutral-500 px-4 py-1.5 lg:px-6 lg:py-2;
 	}
 }
 
@@ -211,6 +211,18 @@ h6 {
 	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
+// ai box
+
+.ai_box_logo_image {
+	@apply flex overflow-hidden rounded-full;
+	width: clamp(3.125rem, 2.85rem + 1.375vw, 4.5rem);
+	height: auto;
+
+	img {
+		@apply m-auto;
+	}
+}
+
 // ai tools category
 
 .category_box {
@@ -224,7 +236,7 @@ h6 {
 // dropdown btn
 
 .dropdown_btn {
-	@apply hover_effect h-[53px] rounded-lg bg-neutral-100 px-8 py-3 text-base text-neutral-800 hover:bg-neutral-200/60;
+	@apply hover_effect h-[44px] rounded-lg bg-neutral-100 px-7 py-2 text-base text-neutral-800 hover:bg-neutral-200/60 lg:h-[53px] lg:px-8 lg:py-3;
 }
 
 // ai tool box
@@ -275,6 +287,20 @@ h6 {
 
 		svg {
 			@apply text-white;
+		}
+	}
+}
+
+// section title and options
+
+.sec_title_options {
+	@apply flex-col gap-6 lg:flex-row;
+
+	.sec_title {
+		@apply w-full flex-1 text-center lg:text-start;
+
+		p {
+			@apply justify-center  lg:justify-start;
 		}
 	}
 }

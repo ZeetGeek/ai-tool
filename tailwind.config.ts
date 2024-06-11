@@ -9,6 +9,7 @@ const config = {
 			screens: {
 				vsm: "480px",
 				xxl: "1360px",
+				"2xl": "1600px",
 			},
 
 			// font family
@@ -20,6 +21,8 @@ const config = {
 			// font size
 			fontSize: {
 				"7xl": "clamp(2.625rem, 2.25rem + 1.875vw, 4.5rem)",
+				"4xl": "clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem)",
+				"2xl": "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
 			},
 
 			// color
@@ -53,8 +56,14 @@ const config = {
 
 			// padding
 			padding: {
+				"20": "clamp(2.5rem, 2rem + 2.5vw, 5rem)",
 				"26": "100px",
-				"30": "120px",
+				"30": "clamp(3.75rem, 3rem + 3.75vw, 7.5rem)",
+			},
+
+			margin: {
+				"20": "clamp(2.5rem, 2rem + 2.5vw, 5rem)",
+				"30": "clamp(3.75rem, 3rem + 3.75vw, 7.5rem)",
 			},
 
 			// box shadow

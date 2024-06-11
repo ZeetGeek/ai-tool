@@ -13,10 +13,10 @@ const SearchBox = () => {
 						<Input
 							className="w-full flex-1 py-4 text-base font-medium text-neutral-800"
 							type="text"
-							placeholder="Search AI Tools..."
+							placeholder="Search For AI Tools..."
 						/>
 					</div>
-					<div className="flex items-center">
+					<div className="hidden items-center lg:flex ">
 						<KeyCommand
 							height={16}
 							width={16}

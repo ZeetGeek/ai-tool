@@ -14,15 +14,17 @@ const AiToolsCategory = ({ data }: AiToolsCategoryProps) => {
 			<Swiper
 				slidesPerView={"auto"}
 				spaceBetween={24}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false,
-				}}
+				// autoplay={{
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// }}
 				loop={true}
 				className="mySwiper"
 				modules={[Autoplay]}
 			>
 				{data.map((item, index) => (
+					// TODO: on click of this categories box change ai productivity tool
+
 					<SwiperSlide
 						key={index}
 						className="w-fit"

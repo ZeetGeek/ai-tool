@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const badgeVariants = cva("hover_effect inline-flex items-center rounded-full px-4 py-2 text-sm transition-colors capitalize", {
+const badgeVariants = cva("hover_effect inline-flex items-center rounded-full lg:px-4 lg:py-2 py-1 px-3  text-sm transition-colors capitalize", {
 	variants: {
 		variant: {
 			default: "border-transparent bg-neutral-900 text-neutral-50 hover:bg-neutral-900/80 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/80 font-semibold",

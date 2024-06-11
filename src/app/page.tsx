@@ -13,7 +13,9 @@ const Home = () => {
 			<Banner />
 
 			{/* ai tools */}
-			<div className="pb-30 pt-20">{/* <AiTools /> */}</div>
+			<div className="pb-30 pt-20">
+				<AiTools />
+			</div>
 
 			{/* features */}
 			{/* <Features /> */}
