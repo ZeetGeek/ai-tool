@@ -61,7 +61,7 @@ const AiTools = () => {
 					</div>
 
 					{/* all tools */}
-					<div className="grid gap-6 sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 ">
+					<div className="ai_tool_boxes_wp">
 						{aiToolsData.map((item) => (
 							<AiToolBox
 								key={item.id}

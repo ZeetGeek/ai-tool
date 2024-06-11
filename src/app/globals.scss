@@ -219,6 +219,10 @@ h6 {
 
 // ai box
 
+.ai_tool_boxes_wp {
+	@apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
+}
+
 .ai_box_logo_image {
 	@apply flex overflow-hidden rounded-full;
 	width: clamp(3.125rem, 2.85rem + 1.375vw, 4.5rem);

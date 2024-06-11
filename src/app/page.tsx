@@ -21,10 +21,12 @@ const Home = () => {
 			<Features />
 
 			{/* home categories */}
-			<div className="py-30">{/* <HomeCategories /> */}</div>
+			<div className="py-30">
+				<HomeCategories />
+			</div>
 
 			{/* ai tools hub */}
-			{/* <AiToolsHub /> */}
+			<AiToolsHub />
 
 			{/* newsletter  */}
 			<div className="py-30">{/* <Newsletter /> */}</div>

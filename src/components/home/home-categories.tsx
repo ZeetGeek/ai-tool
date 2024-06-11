@@ -29,7 +29,7 @@ const HomeCategories = () => {
 					</div>
 
 					{/* home categories */}
-					<div className="grid grid-cols-12 grid-rows-2 gap-6">
+					<div className="xxl:grid-cols-12 xxl:grid-rows-2 grid grid-cols-1 gap-6 md:grid-cols-2">
 						{categoriesData.map(
 							(item, index) =>
 								item.id < 5 && (
@@ -37,18 +37,23 @@ const HomeCategories = () => {
 										key={index}
 										className="category_box"
 									>
-										<div className="category_content">
+										<div className="category_content flex flex-col items-center lg:items-start ">
 											{/* title */}
 											<Title
 												size="h4"
-												className="mb-4"
+												className="mb-4 text-center lg:text-start"
 											>
 												{item.name}
 											</Title>
 
 											{/* description */}
-											<div className="tool_description w-full max-w-[263px]">
-												<Des size="lg">{item.description}</Des>
+											<div className="tool_description w-full max-w-full lg:max-w-[263px]">
+												<Des
+													size="lg"
+													className="text-center lg:text-start"
+												>
+													{item.description}
+												</Des>
 											</div>
 
 											{/* button */}
@@ -66,6 +71,7 @@ const HomeCategories = () => {
 										</div>
 
 										{/* ai tools */}
+										{/* TODO : add image instate of ai_tools box */}
 										<div className="ai_tools">
 											{aiToolsData.map(
 												(item, index) =>

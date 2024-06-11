@@ -27,16 +27,16 @@ const AiToolsHub = () => {
 					</Des>
 				</div>
 
-				<div className="flex items-center justify-between">
+				<div className="sec_title_options flex items-center justify-between">
 					{/* category title and description */}
-					<div className="flex flex-col items-start">
+					<div className="sec_title">
 						<Title size="h4">Featured</Title>
 						<Des size="md">
 							the Featured category <span className="highlight">We found 120 AI Tools results.</span>
 						</Des>
 					</div>
 					{/* category options */}
-					<div className="flex items-center justify-center gap-6">
+					<div className="sec_option flex flex-wrap items-center justify-center gap-6">
 						{categoryOptions.map((item, index) => (
 							<button
 								className={`category_box ${index === 0 && "active"} `}
@@ -49,7 +49,7 @@ const AiToolsHub = () => {
 				</div>
 
 				{/* all ai tools */}
-				<div className="mt-10 grid grid-cols-4 gap-6">
+				<div className="ai_tool_boxes_wp mt-10">
 					{aiToolsData.map((item, index) => (
 						<AiToolBox
 							key={index}
@@ -57,10 +57,14 @@ const AiToolsHub = () => {
 						/>
 					))}
 				</div>
-
 				{/* load more  */}
 				<div className="mt-10 flex">
-					<Button size="lg" className="m-auto" >Load More AI Tools</Button>
+					<Button
+						size="lg"
+						className="m-auto"
+					>
+						Load More AI Tools
+					</Button>
 				</div>
 			</div>
 		</section>
