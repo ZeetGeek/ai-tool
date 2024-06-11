@@ -23,6 +23,7 @@ const UserProfile = () => {
 											height={56}
 											width={56}
 											alt="Profile image"
+											placeholder="blur"
 											className="m-auto"
 										/>
 									</div>
@@ -37,6 +38,7 @@ const UserProfile = () => {
 													src={okayEmoji}
 													height={22}
 													width={22}
+													placeholder="blur"
 													alt="Okay emoji"
 												/>
 											</div>
@@ -56,6 +58,7 @@ const UserProfile = () => {
 												src={userImage}
 												height={46}
 												width={46}
+												placeholder="blur"
 												alt="Profile image"
 											/>
 										</div>

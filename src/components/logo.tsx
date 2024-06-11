@@ -23,6 +23,7 @@ const Logo = ({ href, variant }: LogoProps) => {
 						width={20}
 						height={20}
 						alt="AIverce logo"
+						placeholder="blur"
 					/>
 				</div>
 				<span className="logo_text">AIverce</span>
