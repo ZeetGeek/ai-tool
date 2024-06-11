@@ -10,7 +10,7 @@ const Home = () => {
 	return (
 		<div className="home_page relative">
 			{/* banner */}
-			{/* <Banner /> */}
+			<Banner />
 
 			{/* ai tools */}
 			<div className="pb-30 pt-20">{/* <AiTools /> */}</div>

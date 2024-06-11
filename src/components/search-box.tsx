@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 const SearchBox = () => {
 	return (
 		<>
-			<div className="mx-auto flex items-center justify-center gap-4 ">
+			<div className="mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
 				{/* search input */}
 				<div className="search_box flex h-[60px] w-full max-w-[500px] items-center justify-between gap-3 rounded-xl bg-neutral-100 px-6 hover:bg-neutral-200/60">
 					<div className="flex w-full flex-1 items-center gap-3">
@@ -13,7 +13,7 @@ const SearchBox = () => {
 						<Input
 							className="w-full flex-1 py-4 text-base font-medium text-neutral-800"
 							type="text"
-							placeholder="Search For AI Tool..."
+							placeholder="Search AI Tools..."
 						/>
 					</div>
 					<div className="flex items-center">
@@ -27,7 +27,12 @@ const SearchBox = () => {
 				</div>
 
 				{/* search button */}
-				<Button size="lg">Search Tool</Button>
+				<Button
+					size="lg"
+					className="w-full sm:w-auto"
+				>
+					Search Tool
+				</Button>
 			</div>
 		</>
 	);

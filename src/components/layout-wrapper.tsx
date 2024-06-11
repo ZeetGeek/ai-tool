@@ -23,7 +23,7 @@ const LayoutWrapper = ({ children }: ThemeProviderProps) => {
 				<main className="bg_grid_image bg-white text-neutral-800 dark:bg-neutral-950 dark:text-white">
 					{pathName === "/sign-up" || pathName === "/sign-in" ? null : (
 						<>
-							<div className="pb-26 pt-6 lg:pt-8">
+							<div className="xxl:pb-26 pb-10 pt-6 md:pb-12 lg:pb-16 lg:pt-8 xl:pb-20">
 								<Header isLogged={true} />
 							</div>
 						</>

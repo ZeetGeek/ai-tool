@@ -23,12 +23,12 @@ const Banner = () => {
 							<Title size="h1">
 								Discover the Latest <span className="highlight">AI Tools</span>
 							</Title>
-							<div className="inline-flex items-center gap-5">
+							<div className="mt-4 inline-flex flex-col items-center gap-3 md:flex-row lg:gap-5">
 								<div className="flex items-center">
 									{bannerAiImgs.map((img, index) => (
 										<div
 											key={index}
-											className="banner_ai_img flex h-20 w-20 overflow-hidden rounded-full border-[6px] border-white bg-neutral-300"
+											className="banner_ai_img"
 										>
 											<Image
 												src={img}
@@ -51,7 +51,7 @@ const Banner = () => {
 						</div>
 
 						{/* description */}
-						<div className="mx-auto mb-14 mt-8 w-9/12">
+						<div className="mx-auto mb-7 mt-8 w-full sm:w-9/12 md:mb-10 lg:mb-14">
 							<Des
 								size="lg"
 								className="text-center text-neutral-500"
@@ -65,14 +65,13 @@ const Banner = () => {
 					</div>
 
 					{/* ai bot image */}
-					<div className="bot_images">
+					<div className="bot_images hidden lg:block">
 						<Image
 							src={AiBotImg1}
 							height={340}
 							width={340}
 							alt="ai bot image"
 							placeholder="blur"
-							className="absolute left-[76px] top-[21px]"
 						/>
 						<Image
 							src={AiBotImg2}
@@ -80,7 +79,6 @@ const Banner = () => {
 							width={300}
 							alt="ai bot image"
 							placeholder="blur"
-							className="absolute bottom-[9px] right-[76px]"
 						/>
 					</div>
 				</div>

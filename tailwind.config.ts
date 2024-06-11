@@ -17,6 +17,11 @@ const config = {
 				secondary: "var(--font-poppins)",
 			},
 
+			// font size
+			fontSize: {
+				"7xl": "clamp(2.625rem, 2.25rem + 1.875vw, 4.5rem)",
+			},
+
 			// color
 			colors: {
 				// primary colors
