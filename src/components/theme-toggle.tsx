@@ -31,6 +31,7 @@ const ThemeToggle = () => {
 
 	return (
 		<button
+			name="theme toggle btn"
 			className={`theme_mode profile_item flex w-full items-center ${`theme_mode ${theme === "light" ? "light_theme" : "dark_theme"}`}`}
 			onClick={toggleTheme}
 		>

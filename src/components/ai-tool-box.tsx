@@ -37,7 +37,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				onClick={(e) => {
 					router.push(href, { scroll: false });
 				}}
-				className={`${className} hover_effect ai_tool_box relative w-full cursor-pointer rounded-2xl bg-neutral-100 p-6 hover:bg-neutral-200`}
+				className={`${className} hover_effect ai_tool_box relative w-full cursor-pointer rounded-2xl bg-neutral-100 p-4 hover:bg-neutral-200 lg:p-6`}
 			>
 				{/* logo, name, rating, review */}
 				<div className="flex flex-col items-start gap-3 vsm:flex-row vsm:items-center sm:flex-col sm:items-start md:flex-row md:items-center lg:flex-col lg:items-start  xl:flex-row xl:items-center">
@@ -121,6 +121,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 					{/* save btn */}
 					{!hideSave && (
 						<button
+							name="bookmark btn"
 							onClick={(e) => {
 								e.stopPropagation();
 								isSave(!save);

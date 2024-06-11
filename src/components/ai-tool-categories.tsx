@@ -29,7 +29,12 @@ const AiToolsCategory = ({ data }: AiToolsCategoryProps) => {
 						key={index}
 						className="w-fit"
 					>
-						<button className={`category_box ${index === 0 ? "active" : ""} `}>{item}</button>
+						<button
+							name="category btn"
+							className={`category_box ${index === 0 ? "active" : ""} `}
+						>
+							{item}
+						</button>
 					</SwiperSlide>
 				))}
 			</Swiper>

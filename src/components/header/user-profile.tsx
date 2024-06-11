@@ -28,7 +28,7 @@ const UserProfile = () => {
 									</div>
 
 									{/* user name */}
-									<div className="vsm:block hidden">
+									<div className="hidden vsm:block">
 										<div className="flex flex-col items-start">
 											<div className="flex items-center gap-1">
 												<span className="text-base font-medium capitalize text-neutral-800">Hey,</span>
@@ -47,7 +47,7 @@ const UserProfile = () => {
 							</NavigationMenuTrigger>
 
 							<NavigationMenuContent>
-								<div className="vsm:w-[300px] w-[280px] p-4">
+								<div className="w-[280px] p-4 vsm:w-[300px]">
 									{/* user image, name & email */}
 									<div className="flex items-center gap-[10px]">
 										{/* user profile */}
@@ -110,7 +110,10 @@ const UserProfile = () => {
 									<div className="my-4 h-[1px] w-full bg-neutral-200"></div>
 
 									{/* sign out */}
-									<button className="option_wp profile_item mb-1 w-full cursor-pointer">
+									<button
+										name="sign out btn"
+										className="option_wp profile_item mb-1 w-full cursor-pointer"
+									>
 										<LogOut className="icon_24" />
 										<span className="text-base font-medium text-neutral-800">Sign Out</span>
 									</button>

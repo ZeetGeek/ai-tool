@@ -38,6 +38,7 @@ const SignIn = () => {
 
 								{/* // TODO add name to all buttons and also change color when i click on button using action */}
 								<Button
+									name="password show and hide btn"
 									variant="ghost"
 									className="pass_icon p-1"
 									onClick={(e) => {
@@ -78,6 +79,7 @@ const SignIn = () => {
 
 						{/* sign up button */}
 						<Button
+							name="sign in btn"
 							variant="secondary"
 							type="submit"
 						>

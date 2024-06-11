@@ -225,7 +225,7 @@ h6 {
 
 .ai_box_logo_image {
 	@apply flex overflow-hidden rounded-full;
-	width: clamp(3.125rem, 2.85rem + 1.375vw, 4.5rem);
+	width: 72px;
 	height: auto;
 
 	img {

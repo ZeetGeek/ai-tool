@@ -58,6 +58,7 @@ const HomeCategories = () => {
 
 											{/* button */}
 											<Button
+												name="see all tools btn"
 												className="mt-6"
 												asChild
 											>
@@ -92,6 +93,7 @@ const HomeCategories = () => {
 					{/* load more btn */}
 					<div className="mt-10 flex">
 						<Button
+							name="load more categories btn"
 							className="m-auto"
 							size={"lg"}
 						>

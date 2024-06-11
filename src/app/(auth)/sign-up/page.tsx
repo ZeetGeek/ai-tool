@@ -57,6 +57,7 @@ const SignUp = () => {
 									placeholder="Password"
 								/>
 								<Button
+								name="password show and hide btn"
 									variant="ghost"
 									className="pass_icon p-1"
 									onClick={(e) => {
@@ -102,7 +103,7 @@ const SignUp = () => {
 						</div>
 
 						{/* sign up button */}
-						<Button type="submit" >Sign Up</Button>
+						<Button name="sign up btn" type="submit" >Sign Up</Button>
 					</div>
 				</form>
 			</AuthWrapperProps>

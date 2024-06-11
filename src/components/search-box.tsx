@@ -28,6 +28,7 @@ const SearchBox = () => {
 
 				{/* search button */}
 				<Button
+				name="search btn"
 					size="lg"
 					className="w-full sm:w-auto"
 				>

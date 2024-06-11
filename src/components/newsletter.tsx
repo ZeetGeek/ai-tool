@@ -32,6 +32,7 @@ export const Newsletter = () => {
 								placeholder="Email address"
 							/>
 							<Button
+								name="subscribe btn"
 								size="lg"
 								className="w-full sm:w-auto"
 							>

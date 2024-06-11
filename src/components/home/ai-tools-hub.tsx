@@ -39,6 +39,7 @@ const AiToolsHub = () => {
 					<div className="sec_option flex flex-wrap items-center justify-center gap-6">
 						{categoryOptions.map((item, index) => (
 							<button
+								name="categories btn"
 								className={`category_box ${index === 0 && "active"} `}
 								key={index}
 							>
@@ -60,6 +61,7 @@ const AiToolsHub = () => {
 				{/* load more  */}
 				<div className="mt-10 flex">
 					<Button
+					name="load more ai tools btn"
 						size="lg"
 						className="m-auto"
 					>

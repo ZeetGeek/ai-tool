@@ -56,7 +56,7 @@ const AiTools = () => {
 							</Select>
 
 							{/* filter button */}
-							<Button>Filter The Results</Button>
+							<Button name="filter the result btn" >Filter The Results</Button>
 						</div>
 					</div>
 
@@ -72,7 +72,7 @@ const AiTools = () => {
 
 					{/* load more btn */}
 					<div className="mt-10 text-center">
-						<Button size="lg">Load More AI Tools</Button>
+						<Button name="load more ai tools btn" size="lg">Load More AI Tools</Button>
 					</div>
 				</div>
 			</section>

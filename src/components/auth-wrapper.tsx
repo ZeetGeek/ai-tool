@@ -44,13 +44,22 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 
 							{/* authentication platforms */}
 							<div className="mt-8 flex w-full items-center gap-8">
-								<button className="auth_platform_btn">
+								<button
+									name="apple auth btn"
+									className="auth_platform_btn"
+								>
 									<AppleMac className="icon_24 text-neutral-800" />
 								</button>
-								<button className="auth_platform_btn">
+								<button
+									name="google auth btn"
+									className="auth_platform_btn"
+								>
 									<GoogleCircle className="icon_24 text-neutral-800" />
 								</button>
-								<button className="auth_platform_btn">
+								<button
+									name="x auth btn"
+									className="auth_platform_btn"
+								>
 									<X className="icon_24 text-neutral-800" />
 								</button>
 							</div>
