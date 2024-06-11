@@ -8,6 +8,7 @@ const config = {
 		extend: {
 			screens: {
 				vsm: "480px",
+				xxl: "1360px",
 			},
 
 			// font family

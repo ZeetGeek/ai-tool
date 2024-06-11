@@ -13,23 +13,23 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="container">
-				<div className="flex flex-wrap items-start justify-between gap-6">
+				<div className="flex flex-wrap items-start justify-between space-y-10 sm:space-y-0">
 					{/* logo and contact info */}
-					<div className="flex flex-col items-start sm:w-6/12 md:bg-red-500 xl:w-full xl:max-w-[500px] xl:bg-red-200">
+					<div className="xxl:max-w-[500px] xxl:mb-0 xxl:items-start mb-0 flex w-full flex-col items-center sm:mb-10">
 						{/* logo */}
 						<Logo href="/" />
 
 						{/* description */}
-						<div className="mb-10 mt-6">
+						<div className="xxl:mb-10 xxl:mt-6 my-6">
 							<Des
 								size="md"
-								className="text-neutral-500"
+								className="xxl:text-start text-center text-neutral-500"
 							>
 								Unlock the potential of AI with our curated collection of cutting-edge tools.
 							</Des>
 						</div>
 
-						<div className="phone_email_box_wp ">
+						<div className="phone_email_box_wp flex-col items-center sm:flex-row sm:items-start">
 							{/* // TODO make this email and number box into component  */}
 							<Link
 								href="tel:+911234567890"
@@ -49,7 +49,7 @@ const Footer = () => {
 					</div>
 
 					{/* categories */}
-					<div className="footer_wp md:w-5/12 md:bg-blue-400 xl:w-auto xl:bg-blue-200">
+					<div className="footer_wp w-full sm:w-5/12 md:w-auto">
 						<Title
 							size="h6"
 							className="footer_links_title"
@@ -74,7 +74,7 @@ const Footer = () => {
 					</div>
 
 					{/* pages */}
-					<div className="footer_wp">
+					<div className="footer_wp w-full sm:w-4/12 md:w-auto">
 						<Title
 							size="h6"
 							className="footer_links_title"
@@ -99,12 +99,12 @@ const Footer = () => {
 					</div>
 
 					{/* legal */}
-					<div className="footer_wp">
+					<div className="footer_wp w-full sm:w-3/12 md:w-auto">
 						<Title
 							size="h6"
 							className="footer_links_title"
 						>
-							Pages
+							Legal
 						</Title>
 						<ul className="footer_links">
 							{legalData.map((link, index) => {
@@ -124,10 +124,10 @@ const Footer = () => {
 					</div>
 
 					{/* social links */}
-					<div className="footer_wp">
+					<div className="footer_wp mt-0 w-full sm:mt-10 md:mt-0 md:w-auto">
 						<Title
 							size="h6"
-							className="footer_links_title"
+							className="footer_links_title text-center md:text-start"
 						>
 							Social Links
 						</Title>

@@ -4,7 +4,7 @@ import { Facebook, Instagram, X, Dribbble } from "iconoir-react";
 const SocialLinks = () => {
 	return (
 		<>
-			<ul className="flex flex-col items-start space-y-4">
+			<ul className="flex flex-col items-center space-y-4 md:items-start">
 				{/* facebook */}
 				<li>
 					<Link

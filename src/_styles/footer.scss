@@ -1,16 +1,22 @@
 .footer {
 	.footer_links_title {
-		@apply mb-8;
+		@apply mb-4 sm:mb-6 lg:mb-8;
 	}
 
 	.footer_wp {
-		@apply flex flex-col items-start;
+		@apply flex flex-col items-center sm:items-start;
 
 		.footer_links {
-			@apply flex flex-col items-start space-y-4;
+			@apply flex flex-col items-center space-y-4 sm:items-start;
 
 			.footer_link {
 				@apply text-base font-medium text-neutral-500 transition-colors duration-300 hover:text-neutral-800;
+			}
+		}
+
+		&:nth-child(5) {
+			@media (width <= 768px) {
+				align-items: center !important;
 			}
 		}
 	}
