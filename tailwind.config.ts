@@ -24,6 +24,27 @@ const config = {
 				"6xl": "clamp(2.25rem, 1.5vw + 1.95rem, 3.75rem)",
 				"4xl": "clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem)",
 				"2xl": "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
+
+				lg: [
+					"clamp(1rem, 0.125vw + 0.975rem, 1.125rem)",
+					{
+						lineHeight: "[160%]",
+					},
+				],
+
+				base: [
+					"clamp(0.875rem, 0.125vw + 0.85rem, 1rem)",
+					{
+						lineHeight: "[170%]",
+					},
+				],
+
+				sm: [
+					"clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem)",
+					{
+						lineHeight: "[180%]",
+					},
+				],
 			},
 
 			// color

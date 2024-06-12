@@ -88,7 +88,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				</div>
 
 				{/* description */}
-				<div className="mb-6 mt-4  w-full vsm:w-11/12">
+				<div className="mb-6 mt-4 w-11/12 sm:w-auto">
 					<Des
 						size="md"
 						className="capitalize text-neutral-500"
@@ -116,7 +116,7 @@ const AiToolBox = ({ logo, name, verified, price, rating, reviews, description, 
 				</div>
 
 				{/* save and visit */}
-				<div className="absolute bottom-6 right-6 flex flex-col gap-4">
+				<div className="absolute bottom-4 right-4 flex flex-col gap-4 lg:bottom-6 lg:right-6">
 					{/* save btn */}
 					{!hideSave && (
 						<button

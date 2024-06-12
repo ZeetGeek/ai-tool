@@ -135,15 +135,15 @@ h6 {
 	@apply font-medium capitalize;
 
 	&.lg {
-		@apply text-base leading-[170%];
+		@apply text-lg;
 	}
 
 	&.md {
-		@apply text-sm leading-[180%] md:text-base md:leading-[170%];
+		@apply text-base;
 	}
 
 	&.sm {
-		@apply text-sm leading-[180%];
+		@apply text-sm;
 	}
 
 	&:has(.highlight) {

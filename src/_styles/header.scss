@@ -58,3 +58,19 @@
 		@apply h-10 rounded-md px-2 transition-colors duration-200 ease-out hover:bg-neutral-200/60;
 	}
 }
+
+.header_auth_dropdown {
+	.navigation_menu_viewport {
+		@apply left-[-80px] top-[40px];
+	}
+
+	.auth_dropdown_item {
+		@apply flex items-center justify-start gap-3 font-semibold text-neutral-800 transition-colors duration-300 ease-in-out hover:text-primary-500 active:text-primary-500;
+	}
+}
+
+// .categories_menu {
+// 	.navigation_menu_viewport {
+// 		@apply bg-blue-500 left-[100%];
+// 	}
+// }

@@ -7,8 +7,8 @@ export const Newsletter = () => {
 	return (
 		<>
 			<section className="newsletter">
-				<div className="container">
-					<div className="newsletter_wp relative z-10 overflow-hidden rounded-3xl bg-neutral-900 p-12 text-center md:p-20 xl:py-[100px]">
+				<div className="container ">
+					<div className="newsletter_wp relative z-10 overflow-hidden rounded-3xl bg-neutral-900 px-12 py-20 text-center xl:py-[100px]">
 						{/* title */}
 						<Title
 							size="h2"

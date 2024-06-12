@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { headerLinks } from "@/data/page-links";
+import CategoriesMenu from "@/components/categories/categories-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
 const NavLinks = () => {
 	const pathName = usePathname();
@@ -15,7 +16,7 @@ const NavLinks = () => {
 						<li key={index}>
 							{link.href === "/categories" ? (
 								<>
-									<div className="hidden lg:block">
+									<div className="categories_menu hidden lg:block">
 										<NavigationMenu>
 											<NavigationMenuList>
 												<NavigationMenuItem>
@@ -30,7 +31,9 @@ const NavLinks = () => {
 													</NavigationMenuTrigger>
 
 													<NavigationMenuContent>
-														<NavigationMenuLink>Link</NavigationMenuLink>
+														<NavigationMenuLink>
+															<CategoriesMenu />
+														</NavigationMenuLink>
 													</NavigationMenuContent>
 												</NavigationMenuItem>
 											</NavigationMenuList>

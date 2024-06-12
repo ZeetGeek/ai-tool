@@ -16,16 +16,17 @@ interface AuthWrapperProps {
 const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 	return (
 		<>
-			<section className="auth_page_wp flex h-screen">
+			<section className="auth_page_wp flex min-h-screen">
 				<div className="flex w-full items-center gap-6">
 					{/* content */}
-					<div className={`${page === "sign-in" ? "order-2" : "order-1"} flex h-full w-6/12 items-center justify-center`}>
-						<div className="flex w-full max-w-[600px] flex-col items-center">
+					<div className={`${page === "sign-in" ? "order-2" : "order-1"} flex h-full w-full items-center justify-center lg:w-6/12`}>
+						<div className="flex w-full max-w-[600px]  flex-col items-center">
 							{/* logo */}
 							<Logo
 								href="/"
 								variant={page === "sign-in" ? "secondary" : "primary"}
 							/>
+
 							{/* welcome massage */}
 							<div className="mt-9 text-center">
 								<h1 className="h4_title mb-3">{page === "sign-in" ? <>Welcome Back!</> : <>Join Us Today!</>}</h1>
@@ -33,7 +34,7 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 							</div>
 
 							{/* form */}
-							<div className="mb-8 mt-10 w-full">{children}</div>
+							<div className="mb-6 mt-8 w-full lg:mb-8 lg:mt-10">{children}</div>
 
 							{/* divider */}
 							<div className="flex w-full items-center gap-8">
@@ -43,7 +44,7 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 							</div>
 
 							{/* authentication platforms */}
-							<div className="mt-8 flex w-full items-center gap-8">
+							<div className="mt-6 flex w-full items-center gap-4 md:gap-6 lg:mt-8 lg:gap-8 ">
 								<button
 									name="apple auth btn"
 									className="auth_platform_btn"
@@ -65,7 +66,7 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 							</div>
 
 							{/* account option */}
-							<p className="mt-10 inline-block">
+							<p className="mt-8 inline-block text-center lg:mt-10">
 								<span className="text-lg font-medium text-neutral-500">{page === "sign-in" ? "Don’t have an account yet?" : "If You have an account?"}</span>{" "}
 								<Link
 									className="hover_effect text-neutral-800 hover:underline hover:underline-offset-4"
@@ -79,7 +80,7 @@ const AuthWrapper = ({ page, children }: AuthWrapperProps) => {
 					</div>
 
 					{/* Image */}
-					<div className={`${page === "sign-in" ? "order-1" : "order-2 scale-x-[-1]"} h-full w-6/12 ${page === "sign-in" ? "bg-primary-600" : "bg-secondary-600"} flex items-center justify-center rounded-3xl p-6`}>
+					<div className={`${page === "sign-in" ? "order-1" : "order-2 scale-x-[-1]"} h-full w-6/12 ${page === "sign-in" ? "bg-primary-600" : "bg-secondary-600"} hidden items-center justify-center rounded-3xl p-6 lg:flex `}>
 						<Image
 							src={page === "sign-in" ? signInImage : signUpImage}
 							height={800}

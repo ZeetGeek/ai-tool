@@ -15,7 +15,7 @@ const SignIn = () => {
 		<>
 			<AuthWrapperProps page="sign-in">
 				<form action="#">
-					<div className="flex flex-col space-y-8">
+					<div className="flex flex-col space-y-6 lg:space-y-8 ">
 						{/* email */}
 						<div className="form_field">
 							<div className="field">
@@ -52,7 +52,7 @@ const SignIn = () => {
 						</div>
 
 						{/* remember me and forgot password */}
-						<div className="flex items-center justify-between ">
+						<div className="flex flex-row items-center justify-between">
 							{/* remember me */}
 							<div className="group flex items-center space-x-2">
 								<Checkbox

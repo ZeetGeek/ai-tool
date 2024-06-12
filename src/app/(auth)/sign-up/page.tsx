@@ -15,7 +15,7 @@ const SignUp = () => {
 		<>
 			<AuthWrapperProps page="sign-up">
 				<form action="#">
-					<div className="flex flex-col space-y-8">
+					<div className="flex flex-col space-y-6 lg:space-y-8">
 						{/* first name & last name */}
 						<div className="form_field">
 							{/* first name */}
@@ -57,7 +57,7 @@ const SignUp = () => {
 									placeholder="Password"
 								/>
 								<Button
-								name="password show and hide btn"
+									name="password show and hide btn"
 									variant="ghost"
 									className="pass_icon p-1"
 									onClick={(e) => {
@@ -103,7 +103,12 @@ const SignUp = () => {
 						</div>
 
 						{/* sign up button */}
-						<Button name="sign up btn" type="submit" >Sign Up</Button>
+						<Button
+							name="sign up btn"
+							type="submit"
+						>
+							Sign Up
+						</Button>
 					</div>
 				</form>
 			</AuthWrapperProps>
