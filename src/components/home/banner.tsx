@@ -50,7 +50,7 @@ const Banner = () => {
 						</div>
 
 						{/* description */}
-						<div className="mx-auto mb-7 mt-8 w-full sm:w-9/12 md:mb-10 lg:mb-14">
+						<div className="page_main_des mb-7 mt-8 md:mb-10 lg:mb-14">
 							<Des
 								size="lg"
 								className="text-center text-neutral-500"

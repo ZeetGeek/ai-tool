@@ -50,18 +50,21 @@ const AiToolsHub = () => {
 				</div>
 
 				{/* all ai tools */}
-				<div className="ai_tool_boxes_wp mt-10">
+				<div className="row mt-10 gap-y-6">
 					{aiToolsData.map((item, index) => (
-						<AiToolBox
+						<div
 							key={index}
-							{...item}
-						/>
+							className="col-xxl-3 col-lg-4 col-sm-6 col-12 "
+						>
+							<AiToolBox {...item} />
+						</div>
 					))}
 				</div>
+
 				{/* load more  */}
 				<div className="mt-10 flex">
 					<Button
-					name="load more ai tools btn"
+						name="load more ai tools btn"
 						size="lg"
 						className="m-auto"
 					>

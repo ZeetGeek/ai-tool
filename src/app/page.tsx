@@ -8,6 +8,7 @@ import "@/style/home.scss";
 
 const Home = () => {
 	return (
+		// TODO add bootstrap col classes
 		<div className="home_page relative">
 			{/* banner */}
 			<Banner />

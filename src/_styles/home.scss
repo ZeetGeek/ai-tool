@@ -25,10 +25,11 @@
 					}
 				}
 
+				// TODO manage this image in responsive view
 				&:nth-child(2) {
 					width: clamp(11.875rem, 4.0179rem + 12.2768vw, 18.75rem);
-					bottom: clamp(1.875rem, 3.375rem + -2.3438vw, 0.5625rem);
 					right: clamp(0rem, -5.4286rem + 8.4821vw, 4.75rem);
+					top: 96px;
 				}
 			}
 		}

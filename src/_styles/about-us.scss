@@ -1,0 +1,48 @@
+.about_us {
+	.about_us_box_wp {
+		.about_us_box {
+			@apply h-full rounded-3xl p-5 sm:p-6 lg:p-7 xxl:p-8;
+		}
+
+		&:nth-child(1) {
+			.about_us_box {
+				@apply bg-primary-600;
+			}
+		}
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			.about_us_box {
+				h3,
+				p {
+					@apply text-neutral-50;
+				}
+
+				hr {
+					@apply border-white/50;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			.about_us_box {
+				@apply bg-secondary-600;
+
+				h3,
+				p {
+					@apply text-neutral-900;
+				}
+
+				hr {
+					@apply border-neutral-900/50;
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			.about_us_box {
+				@apply bg-neutral-900;
+			}
+		}
+	}
+}

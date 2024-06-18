@@ -29,7 +29,7 @@ const HomeCategories = () => {
 					</div>
 
 					{/* home categories */}
-					<div className="xxl:grid-cols-12 xxl:grid-rows-2 grid grid-cols-1 gap-6 md:grid-cols-2">
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 xxl:grid-cols-12 xxl:grid-rows-2">
 						{categoriesData.map(
 							(item, index) =>
 								item.id < 5 && (
@@ -43,7 +43,7 @@ const HomeCategories = () => {
 												size="h4"
 												className="mb-4 text-center lg:text-start"
 											>
-												{item.name}
+												{item.title}
 											</Title>
 
 											{/* description */}
@@ -64,7 +64,7 @@ const HomeCategories = () => {
 											>
 												<Link
 													href={item.href}
-													title={`See all ${item.name.toLowerCase()} tools`}
+													title={`See all ${item.title.toLowerCase()} tools`}
 												>
 													See All Tools
 												</Link>

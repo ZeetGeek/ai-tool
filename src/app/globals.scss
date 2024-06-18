@@ -52,7 +52,31 @@ img {
 	height: auto;
 }
 
-// input
+// TODO remove mirror image css
+.mirror_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1920px;
+	height: 7238px;
+	// TODO also remove image from images folder
+	// background-image: url("../_assets/images/home.jpg");
+
+	background-size: contain;
+	background-position: top;
+	z-index: 0;
+	opacity: 0.2;
+	pointer-events: none;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+textarea {
+	resize: none;
+}
+
 input {
 	@apply bg-transparent outline-none;
 }
@@ -101,7 +125,7 @@ h6 {
 	@apply font-primary font-normal capitalize leading-tight text-neutral-800 dark:text-neutral-50 md:leading-snug lg:leading-[120%];
 
 	.highlight {
-		@apply inline-block rounded-[20px] bg-secondary-600 px-8 pt-[14px] font-medium;
+		@apply inline-block rounded-[20px] bg-secondary-600 px-8 pb-2 pt-4 font-medium;
 	}
 }
 
@@ -177,14 +201,17 @@ h6 {
 
 /* container */
 .container {
-	@apply relative mx-auto w-full max-w-[1920px];
-	padding-inline: clamp(1.25rem, 0.875rem + 1.875vw, 3.125rem);
+	max-width: 1820px;
+}
 
-	&.container_full {
-		@media (width < 640px) {
-			padding: 0;
-		}
+.page_into {
+	p {
+		@apply mb-16 mt-6 text-neutral-500;
 	}
+}
+
+.page_main_des {
+	@apply mx-auto w-full sm:w-9/12;
 }
 
 /* logo */
@@ -207,6 +234,26 @@ h6 {
 	@apply h-6 w-6 stroke-2;
 }
 
+// page intro
+
+.page_intro {
+	&:has(h1) {
+		@apply mb-14;
+	}
+
+	h1 {
+		@apply mb-6;
+	}
+
+	p {
+		@apply text-neutral-500;
+	}
+
+	.intro_btns {
+		@apply mt-10;
+	}
+}
+
 // static image
 
 .static_dark_icon {
@@ -217,11 +264,7 @@ h6 {
 	filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
-// ai box
-
-.ai_tool_boxes_wp {
-	@apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
-}
+// ai tools
 
 .ai_box_logo_image {
 	@apply flex overflow-hidden rounded-full;
@@ -311,6 +354,63 @@ h6 {
 
 		p {
 			@apply justify-center  lg:justify-start;
+		}
+	}
+}
+
+// faqs
+
+.faq_box {
+	@apply bg-neutral-100;
+}
+
+.faq_box[data-state="open"] {
+	@apply bg-primary-600;
+
+	.faq_title {
+		@apply border-white/50;
+	}
+
+	h6,
+	p,
+	.accordion_icon {
+		@apply text-white;
+	}
+}
+
+// input field
+
+.form_field {
+	@apply flex w-full flex-col items-center gap-6 sm:flex-row lg:gap-8;
+
+	.field {
+		@apply relative flex w-full items-center gap-3 overflow-hidden rounded-lg bg-neutral-100 pl-6 hover:bg-neutral-200/60;
+
+		&:has(textarea) {
+			@apply items-start;
+
+			.icon_24 {
+				@apply mt-[18px];
+			}
+		}
+
+		input,
+		textarea {
+			@apply w-full bg-transparent py-4 pr-6 text-base font-medium text-neutral-900 outline-none placeholder:capitalize;
+		}
+
+		input[type="password"] {
+			@apply pr-8;
+		}
+
+		&:has(input:focus) {
+			@apply bg-neutral-200/70;
+		}
+
+		.pass_icon {
+			.icon_24 {
+				@apply absolute right-0 top-[50%] -translate-x-6 translate-y-[-50%];
+			}
 		}
 	}
 }

@@ -1,0 +1,124 @@
+.all_categories {
+	.main_category_box_wp {
+		.main_category_box {
+			@apply relative overflow-hidden p-6 vsm:p-7 lg:p-9 xxl:p-10;
+			height: clamp(27.5rem, 17.241vw + 16.81rem, 37.5rem);
+
+			@media (width <= 991px) {
+				height: clamp(30rem, 53.812vw + 4.17rem, 37.5rem);
+			}
+
+			@media (width <= 768px) {
+				height: clamp(25rem, 41.885vw + 9.921rem, 30rem);
+			}
+
+			@media (width <= 575px) {
+				height: clamp(21.25rem, 23.529vw + 16.544rem, 25rem);
+			}
+
+			h4 {
+				@apply mb-2 lg:mb-4;
+			}
+
+			a {
+				@apply mt-3 lg:mt-6;
+			}
+
+			&::before {
+				content: "";
+				@apply absolute bottom-0 left-0 z-10 h-[200px] w-full;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+			}
+		}
+
+		.categories_icon {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+		}
+
+		.three_ai_tools_image {
+			position: absolute;
+			width: 100%;
+			right: -10px;
+			bottom: 0;
+
+			img {
+				width: 100%;
+			}
+
+			@media (width<= 991px) {
+				// right: -100px;
+			}
+		}
+
+		&:nth-child(1),
+		&:nth-child(5),
+		&:nth-child(9) {
+			.main_category_box {
+				@apply rounded-4xl bg-primary-600 hover:bg-primary-500;
+
+				h4,
+				p {
+					@apply text-white;
+				}
+
+				a {
+					@apply bg-white text-black hover:bg-white/90;
+				}
+			}
+		}
+
+		&:nth-child(2),
+		&:nth-child(6),
+		&:nth-child(10) {
+			.main_category_box {
+				@apply rounded-4xl bg-neutral-200  hover:bg-neutral-100;
+
+				h4 {
+					@apply text-neutral-900;
+				}
+
+				p {
+					@apply text-neutral-500;
+				}
+
+				a {
+					@apply bg-neutral-900 text-white hover:bg-neutral-800;
+				}
+			}
+		}
+
+		&:nth-child(3),
+		&:nth-child(7) {
+			.main_category_box {
+				@apply rounded-4xl  bg-neutral-900 hover:bg-neutral-800;
+
+				h4,
+				p {
+					@apply text-white;
+				}
+
+				a {
+					@apply bg-white text-black hover:bg-white/90;
+				}
+			}
+		}
+
+		&:nth-child(4),
+		&:nth-child(8) {
+			.main_category_box {
+				@apply rounded-4xl bg-secondary-600 hover:bg-secondary-500;
+
+				h4,
+				p {
+					@apply text-neutral-900;
+				}
+
+				a {
+					@apply bg-neutral-900 text-white hover:bg-neutral-800;
+				}
+			}
+		}
+	}
+}

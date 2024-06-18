@@ -8,22 +8,20 @@ import SocialLinks from "./social-links";
 import "@/style/footer.scss";
 
 const Footer = () => {
-	// links data
-
 	return (
 		<footer className="footer">
 			<div className="container">
 				<div className="flex flex-wrap items-start justify-between space-y-10 sm:space-y-0">
 					{/* logo and contact info */}
-					<div className="xxl:max-w-[500px] xxl:mb-0 xxl:items-start mb-0 flex w-full flex-col items-center sm:mb-10">
+					<div className="mb-0 flex w-full flex-col items-center sm:mb-10 xxl:mb-0 xxl:max-w-[500px] xxl:items-start">
 						{/* logo */}
 						<Logo href="/" />
 
 						{/* description */}
-						<div className="xxl:mb-10 xxl:mt-6 my-6">
+						<div className="my-6 xxl:mb-10 xxl:mt-6">
 							<Des
 								size="md"
-								className="xxl:text-start text-center text-neutral-500"
+								className="text-center text-neutral-500 xxl:text-start"
 							>
 								Unlock the potential of AI with our curated collection of cutting-edge tools.
 							</Des>
@@ -135,7 +133,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<hr className="mt-14 border border-neutral-200" />
+				<hr className="lg:mt-14 mt-10 border border-neutral-200" />
 
 				{/* copy right */}
 				<div className="py-8 text-center">

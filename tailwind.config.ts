@@ -8,7 +8,11 @@ const config = {
 		extend: {
 			screens: {
 				vsm: "480px",
-				xxl: "1360px",
+				sm: "576px",
+				md: "768px",
+				lg: "992px",
+				xl: "1200px",
+				xxl: "1400px",
 				"2xl": "1600px",
 			},
 
@@ -22,27 +26,28 @@ const config = {
 			fontSize: {
 				"7xl": "clamp(2.625rem, 2.25rem + 1.875vw, 4.5rem)",
 				"6xl": "clamp(2.25rem, 1.5vw + 1.95rem, 3.75rem)",
+				"5xl": "clamp(2rem, 1.8rem + 1vw, 3rem)",
 				"4xl": "clamp(1.75rem, 1.65rem + 0.5vw, 2.25rem)",
-				"2xl": "clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem)",
+				"2xl": "clamp(1.125rem, 1.075rem + 0.25vw, 1.375rem)",
 
 				lg: [
 					"clamp(1rem, 0.125vw + 0.975rem, 1.125rem)",
 					{
-						lineHeight: "[160%]",
+						lineHeight: "160%",
 					},
 				],
 
 				base: [
 					"clamp(0.875rem, 0.125vw + 0.85rem, 1rem)",
 					{
-						lineHeight: "[170%]",
+						lineHeight: "170%",
 					},
 				],
 
 				sm: [
 					"clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem)",
 					{
-						lineHeight: "[180%]",
+						lineHeight: "180%",
 					},
 				],
 			},
@@ -106,6 +111,8 @@ const config = {
 					to: { height: "0" },
 				},
 			},
+
+			// TODO create a animation global class and remove hover_effect class
 
 			// animation
 			animation: {

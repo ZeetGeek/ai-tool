@@ -5,7 +5,7 @@ interface DescriptionProps {
 }
 
 const Des = ({ children, className, size }: DescriptionProps) => {
-	return <p className={`${className} description ${size}`}>{children}</p>;
+	return <p className={`${className ? className : ""} description ${size}`}>{children}</p>;
 };
 
 export default Des;

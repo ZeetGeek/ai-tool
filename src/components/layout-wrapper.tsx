@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Header from "@/components/header";
 import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
+import MirrorImage from "@/components/mirror-image";
+
 import Footer from "./footer";
 
 interface ThemeProviderProps {
@@ -31,6 +33,7 @@ const LayoutWrapper = ({ children }: ThemeProviderProps) => {
 					{children}
 
 					{pathName === "/sign-up" || pathName === "/sign-in" ? null : <Footer />}
+					<MirrorImage />
 				</main>
 			</AnimatePresence>
 		</>

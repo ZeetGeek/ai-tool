@@ -56,23 +56,30 @@ const AiTools = () => {
 							</Select>
 
 							{/* filter button */}
-							<Button name="filter the result btn" >Filter The Results</Button>
+							<Button name="filter the result btn">Filter The Results</Button>
 						</div>
 					</div>
 
 					{/* all tools */}
-					<div className="ai_tool_boxes_wp">
+					<div className="row gap-y-6">
 						{aiToolsData.map((item) => (
-							<AiToolBox
+							<div
 								key={item.id}
-								{...item}
-							/>
+								className="col-xxl-3 col-lg-4 col-sm-6 col-12"
+							>
+								<AiToolBox {...item} />
+							</div>
 						))}
 					</div>
 
 					{/* load more btn */}
 					<div className="mt-10 text-center">
-						<Button name="load more ai tools btn" size="lg">Load More AI Tools</Button>
+						<Button
+							name="load more ai tools btn"
+							size="lg"
+						>
+							Load More AI Tools
+						</Button>
 					</div>
 				</div>
 			</section>
