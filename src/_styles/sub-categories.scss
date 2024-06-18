@@ -1,0 +1,70 @@
+.sub_categories {
+	.subcategories_wp {
+		.subcategories_box {
+			@apply rounded-4xl p-6 lg:p-8 xl:p-10;
+		}
+
+		// TODO find a solution of this type of nth-child css make it dynamic
+
+		&:nth-child(1),
+		&:nth-child(5) {
+			.subcategories_box {
+				@apply bg-primary-600;
+
+				.sub_category_content {
+					h4,
+					p {
+						@apply text-white;
+					}
+				}
+
+				.sub_category_btn {
+					@apply bg-white text-neutral-900 hover:bg-white/90;
+				}
+			}
+		}
+
+		&:nth-child(2),
+		&:nth-child(6) {
+			.subcategories_box {
+				@apply bg-neutral-100;
+
+				.ai_tool_box {
+					@apply bg-white hover:bg-neutral-200;
+				}
+
+				.sub_category_btn {
+					@apply bg-neutral-900 text-white hover:bg-neutral-800;
+				}
+			}
+		}
+
+		&:nth-child(3),
+		&:nth-child(7) {
+			.subcategories_box {
+				@apply bg-neutral-900;
+
+				.sub_category_content {
+					h4,
+					p {
+						@apply text-white;
+					}
+				}
+
+				.sub_category_btn {
+					@apply bg-white text-neutral-900 hover:bg-white/90;
+				}
+			}
+		}
+
+		&:nth-child(4) {
+			.subcategories_box {
+				@apply bg-secondary-600;
+			}
+
+			.sub_category_btn {
+				@apply bg-neutral-900 text-white hover:bg-neutral-800;
+			}
+		}
+	}
+}

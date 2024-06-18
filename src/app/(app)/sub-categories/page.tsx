@@ -2,6 +2,7 @@ import PageIntro from "@/components/page-into";
 import AllSubcategories from "@/components/sub-categories/all-subcategories";
 import Des from "@/components/ui/description";
 import Title from "@/components/ui/title";
+import "@/style/sub-categories.scss";
 
 const SubCategories = () => {
 	return (

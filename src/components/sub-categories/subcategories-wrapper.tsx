@@ -1,36 +1,53 @@
+import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Title from "../ui/title";
 import Des from "../ui/description";
+import Link from "next/link";
 
 interface SubCategoriesWrapperProps {
 	children: React.ReactNode;
+	title: string;
+	description: string;
+	icon: StaticImageData;
+	href: string;
 }
 
-const SubCategoriesWrapper = ({ children }: SubCategoriesWrapperProps) => {
+const SubCategoriesWrapper = ({ children, title, description, icon, href }: SubCategoriesWrapperProps) => {
 	return (
 		<>
-			<div className="subcategories_wp bg-red-100 p-10">
+			<div className="subcategories_box">
 				{/* title and description */}
-				<div className="mb-8 flex items-center justify-between">
-					<div className="flex items-center">
+				<div className="mb-8 flex flex-col items-center justify-between gap-6 md:flex-row md:gap-0">
+					<div className="flex flex-col items-center gap-6 md:flex-row ">
 						{/* icon */}
-						{/* <Image
-										src={}
-										hight={80}
-										width={80}
-										alt={}
-									/> */}
+						<Image
+							src={icon}
+							height={80}
+							width={80}
+							alt={`${title} icon`}
+						/>
 
 						{/* title and description */}
-						<div className="flex flex-col items-start gap-4">
-							<Title size="h4">Personal Assistant</Title>
-							<Des size="md">Your personal assistant for efficient daily task management.</Des>
+						<div className="sub_category_content flex flex-col items-center gap-3 text-center md:items-start md:text-start">
+							<Title size="h4">{title}</Title>
+							<Des size="md">{description}</Des>
 						</div>
 					</div>
 
 					{/* View more tools  */}
-					<Button size="md">View More Tools</Button>
+					<Button
+						size="md"
+						asChild
+					>
+						<Link
+							className="sub_category_btn"
+							href={href}
+							title={`View ${title} tools`}
+						>
+							View More Tools
+						</Link>
+					</Button>
 				</div>
 
 				{children}
