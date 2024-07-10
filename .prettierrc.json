@@ -1,9 +1,8 @@
 {
 	"useTabs": true,
-	"tabWidth": 4,
-	"trailingComma": "es5",
-	"singleQuote": false,
-	"printWidth": 256,
+	"tabWidth": 5,
+	"printWidth": 120,
+	"singleQuote": true,
 	"semi": true,
 	"arrowParens": "always",
 	"endOfLine": "auto",
@@ -15,5 +14,14 @@
 	"bracketSameLine": false,
 	"jsxSingleAttributePerLine": true,
 	"singleAttributePerLine": true,
-	"plugins": ["prettier-plugin-tailwindcss"]
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "html"
+			}
+		}
+	],
+	"plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-organize-imports"],
+	"pluginSearchDirs": ["./node_modules", "./"]
 }

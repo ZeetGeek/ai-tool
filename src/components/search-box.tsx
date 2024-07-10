@@ -2,12 +2,16 @@ import { Search, KeyCommand } from "iconoir-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-const SearchBox = () => {
+interface SearchBoxProps {
+	className?: string;
+}
+
+const SearchBox = ({ className }: SearchBoxProps) => {
 	return (
 		<>
-			<div className="mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row">
+			<div className={`${className} mx-auto flex flex-col items-center justify-center gap-4 sm:flex-row`}>
 				{/* search input */}
-				<div className="search_box flex h-[60px] w-full sm:max-w-[500px] max-w-full items-center justify-between gap-3 rounded-xl bg-neutral-100 px-6 hover:bg-neutral-200/60">
+				<div className="search_box flex h-[60px] w-full max-w-full items-center justify-between gap-3 rounded-xl bg-neutral-100 px-6 hover:bg-neutral-200/60 sm:max-w-[500px]">
 					<div className="flex w-full flex-1 items-center gap-3">
 						<Search className="icon_24 text-neutral-500" />
 						<Input
@@ -28,7 +32,7 @@ const SearchBox = () => {
 
 				{/* search button */}
 				<Button
-				name="search btn"
+					name="search btn"
 					size="lg"
 					className="w-full sm:w-auto"
 				>

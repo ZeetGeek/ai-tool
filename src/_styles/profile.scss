@@ -1,0 +1,30 @@
+.profile_page {
+	.profile_info {
+		.profile_bg_cover_img {
+			@apply relative h-[500px] rounded-4xl bg-cover bg-center bg-no-repeat;
+		}
+
+		.profile_box,
+		.tools_info_box {
+			@apply rounded-3xl p-6;
+		}
+
+		.profile_box {
+			@apply h-[315px] w-[480px] bg-neutral-200;
+		}
+
+		.tools_info_box {
+			@apply h-[141px] w-full bg-red-200;
+		}
+
+		.row:has(.tools_info_box) {
+			--bs-gutter-x: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
+			row-gap: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
+			padding-bottom: 48px;
+
+			@media (width < 1400px) {
+				padding-bottom: 0px;
+			}
+		}
+	}
+}

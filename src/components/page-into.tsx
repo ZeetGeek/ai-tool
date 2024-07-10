@@ -1,7 +1,6 @@
 "use client";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 interface PageIntroProps {
 	children?: React.ReactNode;

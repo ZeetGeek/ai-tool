@@ -81,7 +81,7 @@ const UserProfile = () => {
 												>
 													<div className="option_wp">
 														{/* icon */}
-														{item.href === "/see-profile" ? (
+														{item.href === "/profile" ? (
 															<UserCircle className="icon_24" />
 														) : item.href === "/upload-tools" ? (
 															<Upload className="icon_24" />

@@ -8,7 +8,7 @@ export const userProfile = [
 	{
 		id: 0,
 		name: "See Profile",
-		href: "/see-profile",
+		href: "/profile",
 	},
 	{
 		id: 1,

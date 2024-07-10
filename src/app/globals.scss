@@ -122,15 +122,15 @@ h3,
 h4,
 h5,
 h6 {
-	@apply font-primary font-normal capitalize leading-tight text-neutral-800 dark:text-neutral-50 md:leading-snug lg:leading-[120%];
+	@apply font-primary font-normal capitalize leading-normal text-neutral-800 dark:text-neutral-50 md:leading-snug lg:leading-[120%];
 
 	.highlight {
-		@apply inline-block rounded-[20px] bg-secondary-600 px-3 pb-2 pt-4 font-medium md:px-4 lg:px-6 xl:px-8;
+		@apply inline-block rounded-[20px] bg-secondary-600 px-3 pb-1 pt-4 font-medium md:px-4 lg:px-6 xl:px-8;
 	}
 }
 
 .h1_title {
-	@apply text-7xl leading-relaxed sm:leading-normal;
+	@apply text-7xl;
 }
 
 .h2_title {
@@ -241,8 +241,12 @@ h6 {
 		@apply mb-14;
 	}
 
+	&:has(.search_box) {
+		@apply mb-20;
+	}
+
 	h1 {
-		@apply mb-6;
+		@apply mb-4 lg:mb-6;
 	}
 
 	p {
@@ -251,6 +255,47 @@ h6 {
 
 	.intro_btns {
 		@apply mt-10;
+	}
+}
+
+// page info
+
+.page_info {
+	.content_item {
+		@apply mb-6 last:mb-0;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply mb-3;
+	}
+
+	p {
+		@apply text-neutral-500;
+	}
+
+	b {
+		@apply font-semibold text-neutral-800;
+	}
+
+	ul {
+		@apply list-outside list-disc ps-5 marker:text-neutral-500;
+
+		li {
+			@apply mb-1 last:mb-0;
+		}
+	}
+
+	h3 + ul,
+	h4 + ul,
+	h5 + ul,
+	h6 + ul,
+	p + ul,
+	span + ul,
+	a + ul {
+		margin-top: 14px;
 	}
 }
 
