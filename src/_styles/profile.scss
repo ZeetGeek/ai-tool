@@ -1,30 +1,76 @@
 .profile_page {
-	.profile_info {
-		.profile_bg_cover_img {
-			@apply relative h-[500px] rounded-4xl bg-cover bg-center bg-no-repeat;
-		}
+     .profile_info {
+          .profile_bg_cover_img {
+               @apply relative rounded-4xl bg-cover bg-center bg-no-repeat aspect-[1/0.2];
+          }
 
-		.profile_box,
-		.tools_info_box {
-			@apply rounded-3xl p-6;
-		}
+          .profile_box,
+          .tools_info_box {
+               @apply rounded-3xl p-6;
+          }
 
-		.profile_box {
-			@apply h-[315px] w-[480px] bg-neutral-200;
-		}
+          .profile_box {
+               @apply w-full max-w-[480px] bg-white border-2 border-neutral-300;
+               box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+          }
 
-		.tools_info_box {
-			@apply h-[141px] w-full bg-red-200;
-		}
+          .tools_info_box_wp {
+               .tools_info_box {
+                    @apply w-full p-6 pb-3;
+               }
 
-		.row:has(.tools_info_box) {
-			--bs-gutter-x: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
-			row-gap: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
-			padding-bottom: 48px;
+               &:nth-child(1) {
+                    .tools_info_box {
+                         @apply bg-secondary-600;
+                    }
+               }
 
-			@media (width < 1400px) {
-				padding-bottom: 0px;
-			}
-		}
-	}
+               &:nth-child(2) {
+                    .tools_info_box {
+                         @apply bg-primary-600;
+                    }
+               }
+
+               &:nth-child(3) {
+                    .tools_info_box {
+                         @apply bg-neutral-800;
+                    }
+               }
+
+               &:nth-child(2),
+               &:nth-child(3) {
+                    .tools_info_box {
+                         .tools_into_box_title,
+                         .h3_title,
+                         .tools_info_icon {
+                              @apply text-white;
+                         }
+                    }
+               }
+
+               .tools_into_box_title {
+                    @apply text-base;
+               }
+
+               .tools_info_icon {
+                    @apply text-xl;
+               }
+          }
+
+          .profile_option {
+               gap: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
+
+               .row:has(.tools_info_box) {
+                    row-gap: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
+                    @apply pb-12;
+                    --bs-gutter-x: clamp(1.5rem, 0.431rem + 1.7241vw, 2.5rem);
+               }
+          }
+
+          @media (width < 1400px) {
+               .row:has(.tools_info_box) {
+                    @apply pb-0;
+               }
+          }
+     }
 }
